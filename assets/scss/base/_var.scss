@@ -1,0 +1,36 @@
+@use 'mixins' as *;
+
+:root {
+    --vh: 1vh;
+    --container-width: #{rem(1288)};
+    --container-padding: #{rem(20)};
+    --scrl-mt: #{rem(120)};
+    --section-mb: #{rem(152)};
+
+    --lght-green: #a1d2a0;
+    --drk-green: #003232;
+    --brght-green: #4ed686;
+    --color-olive: #507846;
+    --color-white: #f0f5f0;
+    --color-dark: #1a1a1a;
+    --color-grey: #f0f5f0cc;
+    --color-lght: #f0f5f0;
+    --color-dark_half: #1a1a1ab2;
+    --bg-body: #f0f5f0;
+
+    --ff-accent: 'JUST_Sans', sans-serif;
+    --ff-base: 'Source_Sans', sans-serif;
+}
+
+@media (max-width: 991px) {
+    :root {
+        --section-mb: #{rem(64)};
+    }
+}
+
+@media (max-width: 767px) {
+    :root {
+        --section-mb: #{rem(56)};
+        --container-padding: #{rem(12)};
+    }
+}
