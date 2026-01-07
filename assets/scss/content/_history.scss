@@ -1,0 +1,107 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.history {
+    margin-bottom: var(--section-mb);
+
+    &__team {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(24);
+        margin-bottom: rem(48);
+    }
+
+    &__preview {
+        position: relative;
+        max-width: rem(718);
+        width: 100%;
+        overflow: hidden;
+        border-radius: rem(40);
+    }
+
+    &__logo {
+        width: rem(118);
+    }
+
+    &__title {
+        font: 800 #{rem(40)} / 120% var(--ff-accent);
+        margin-bottom: rem(8);
+    }
+
+    &__text {
+        font: 400 #{rem(14)} / 150% var(--ff-base);
+        color: var(--color-dark_half);
+
+        &:not(:last-of-type) {
+            margin-bottom: rem(24);
+        }
+    }
+
+    &__link {
+        margin-top: rem(40);
+    }
+
+    &__description {
+        max-width: rem(506);
+    }
+
+    &__employees {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: rem(24);
+        margin-bottom: rem(96);
+    }
+
+    &__employee {
+        border-radius: rem(40);
+        overflow: hidden;
+        position: relative;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        padding: rem(24);
+        left: rem(24);
+        right: rem(24);
+        bottom: rem(16);
+        display: flex;
+        flex-direction: column;
+        gap: rem(8);
+        border-radius: rem(20);
+        color: var(--color-white);
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px) saturate(180%) contrast(100%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%) contrast(100%);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+        p {
+            margin: 0;
+
+            &:first-child {
+                font: 800 #{rem(20)} / 100% var(--ff-accent);
+                text-transform: capitalize;
+            }
+
+            &:last-child {
+                font: 400 #{rem(14)} / 100% var(--ff-base);
+                color: #f5f5f5cc;
+            }
+
+            span {
+                color: var(--accent-green);
+            }
+        }
+    }
+
+    &__cta {
+        margin: 0 auto;
+        display: flex;
+        width: max-content;
+    }
+}

@@ -1,0 +1,50 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.testiominials-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: rem(144);
+    margin: 0 auto;
+    color: var(--lght-green);
+
+    &__stars {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: rem(24);
+            height: rem(24);
+        }
+    }
+
+    &__val {
+        font: 400 #{rem(24)} / 130% var(--ff-base);
+        font-style: italic;
+        margin-bottom: rem(4);
+    }
+
+    &__stars {
+        margin-bottom: rem(8);
+    }
+
+    &__users {
+        display: flex;
+        margin-bottom: rem(8);
+
+        img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: rem(-17);
+        }
+    }
+
+    &__text {
+        font: 300 #{rem(14)} / 130% var(--ff-base);
+    }
+}

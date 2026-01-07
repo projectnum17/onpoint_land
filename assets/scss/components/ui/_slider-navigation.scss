@@ -1,0 +1,80 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.slider-navigation {
+    padding-top: rem(96);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: rem(8);
+
+    &:has(.swiper-button-lock) {
+        display: none;
+    }
+
+    &--lght {
+        .slider-navigation__btn {
+            border: 1px solid var(--lght-green);
+        }
+
+        svg {
+            color: var(--lght-green);
+        }
+    }
+
+    &--drk {
+        .slider-navigation__btn {
+            border: 1px solid var(--color-dark);
+        }
+
+        svg {
+            color: var(--color-dark);
+        }
+    }
+
+    &__btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: rem(40);
+        height: rem(40);
+        border-radius: 50%;
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include hover {
+            &:first-child {
+                svg {
+                    transform: translateX(-2px);
+                }
+            }
+
+            &:last-child {
+                svg {
+                    transform: translateX(2px);
+                }
+            }
+        }
+
+        &:first-child {
+            svg {
+                margin-right: 1px;
+            }
+        }
+        &:last-child {
+            svg {
+                margin-left: 1px;
+            }
+        }
+
+        &.swiper-button-disabled {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        svg {
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+    }
+}

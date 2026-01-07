@@ -1,0 +1,11 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.content-title {
+    font: 800 #{rem(72)} / 100% var(--ff-accent);
+    text-transform: capitalize;
+
+    span {
+        color: var(--accent-green);
+    }
+}

@@ -1,0 +1,70 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.achiev {
+    margin-bottom: var(--section-mb);
+    &__list {
+        display: grid;
+        gap: rem(24);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: repeat(6, auto);
+        grid-auto-flow: column;
+    }
+
+    &__item {
+        overflow-wrap: anywhere;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-row: span 2;
+        padding: rem(40);
+        border-radius: rem(20);
+        &:nth-child(odd) {
+            background: var(--drk-green);
+            color: var(--lght-green);
+        }
+
+        &:nth-child(even) {
+            background: var(--lght-green);
+            color: var(--drk-green);
+        }
+
+        &--md {
+            grid-column: 2;
+            grid-row: span 3;
+        }
+
+        &--lg {
+            grid-column: 3;
+            grid-row: span 6;
+        }
+
+        &-info {
+            display: flex;
+            align-items: center;
+            gap: rem(19);
+        }
+
+        &-ico {
+            display: inline-flex;
+            flex-shrink: 0;
+            width: rem(56);
+            height: rem(56);
+        }
+
+        &-val {
+            font: 800 #{rem(48)} / 110% var(--ff-accent);
+            display: inline-flex;
+            margin-bottom: rem(8);
+        }
+
+        &-text {
+            font: 400 #{rem(18)} / 150% var(--ff-accent);
+
+            span {
+                font-weight: 800;
+            }
+        }
+    }
+}

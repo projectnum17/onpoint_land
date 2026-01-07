@@ -1,0 +1,79 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.branches {
+    padding-block: var(--section-mb);
+    clip-path: ellipse(150% 100% at 50% 100%);
+    margin-bottom: var(--section-mb);
+
+    .branches-box {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: rem(24);
+
+        &__info {
+            padding-block: rem(33);
+            max-width: rem(621);
+            width: 100%;
+            color: var(--lght-green);
+        }
+
+        &__logo {
+            width: rem(64);
+            margin-bottom: rem(24);
+        }
+
+        &__title {
+            font: 800 #{rem(40)} / 130% var(--ff-accent);
+            margin-bottom: rem(16);
+        }
+
+        &__text {
+            font: 400 #{rem(14)} / 150% var(--ff-base);
+            margin-bottom: rem(56);
+        }
+
+        &__preview {
+            max-width: rem(491);
+            position: relative;
+            width: 100%;
+            border-radius: rem(40);
+            overflow: hidden;
+        }
+
+        &__stats {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            gap: rem(12);
+            position: absolute;
+            bottom: rem(24);
+            width: 90%;
+            max-width: 402px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &__stat {
+            border-radius: rem(20);
+            display: flex;
+            flex-direction: column;
+            gap: rem(4);
+            padding: rem(16) rem(32);
+            color: var(--color-white);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px) saturate(180%) contrast(100%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%) contrast(100%);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        &__subtitle {
+            font: 400 #{rem(14)} / 130% var(--ff-base);
+        }
+
+        &__val {
+            font: 800 #{rem(32)} / 130% var(--ff-accent);
+        }
+    }
+}

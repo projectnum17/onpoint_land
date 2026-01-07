@@ -1,0 +1,6 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.circles {
+    margin-bottom: var(--section-mb);
+}

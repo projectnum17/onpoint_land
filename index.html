@@ -5,16 +5,1229 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Onpoint | Land</title>
+
+    <link rel="stylesheet" href="./assets/libs/swiper/swiper.min.css">
     <link rel="stylesheet" href="./assets/css/style.min.css">
+
+    <script defer src="./assets/libs/swiper/swiper.min.js"></script>
     <script defer type="module" src="./assets/js/main.js"></script>
 </head>
 
 <body>
-    <header class="header">header</header>
-    <main class="main">main
-        <div class="container">container</div>
+    <header class="header js-header">
+        <div class="container">
+            <div class="header__logo">
+                <img src="./assets/img/ico/logo.png" alt="Logotype">
+            </div>
+            <nav class="header__nav">
+                <ul>
+                    <li>
+                        <a href="#section_1">Über uns</a>
+                    </li>
+                    <li>
+                        <a href="#section_2">Referenzen</a>
+                    </li>
+                    <li>
+                        <a href="#section_3">Angebot</a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="javascript: void(0)" class="header__link cta cta--accent">
+                Jetzt Termin Buchen
+            </a>
+        </div>
+    </header>
+    <main class="main">
+        <section class="hero">
+            <img src="./assets/img/hero.jpg" alt="" class="hero__bg">
+            <div class="container">
+                <div class="hero__description">
+                    <h1 class="hero__title">Dein neues Vertriebsteam<span>.</span></h1>
+                    <p class="hero__about">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis purus a tellus accumsan
+                        elementum quis a nunc. Morbi in tortor eu orci imperdiet facilisis. Mauris eget nibh nec lacus
+                        semper aliquam at a nunc.
+                    </p>
+                </div>
+                <ul class="hero__info">
+                    <li class="hero__value">
+                        <p class="hero__value-num">
+                            2<span>.</span>000K
+                        </p>
+                        <p class="hero__value-text">Sales Calls geführt</p>
+                    </li>
+                    <li class="hero__value">
+                        <p class="hero__value-num">
+                            5+
+                        </p>
+                        <p class="hero__value-text">Jahre am Markt</p>
+                    </li>
+                    <li class="hero__value">
+                        <p class="hero__value-num">
+                            5M<span>.</span> €
+                        </p>
+                        <p class="hero__value-text">Umsatz generiert</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="benefits">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-head__subtitle">
+                        Maecenas sodales neque
+                    </p>
+                    <h2 class="section-head__title content-title">
+                        Gute Vertriebler zu finden ist nicht leicht<span>.</span>
+                    </h2>
+                    <p class="section-head__text">
+                        Curabitur commodo diam a maximus placerat. Phasellus mollis orci elit, vel rhoncus ligula
+                        pretium quis.
+                    </p>
+                </div>
+                <div class="benefits__content">
+                    <ul class="benefits__list">
+                        <li>
+                            <img src="./assets/img/ico/b_1.svg" alt="Icon" class="benefits__ico">
+                            <h3 class="benefits__title">Integer porta euismod egestas</h3>
+                            <p class="benefits__text">
+                                Donec vehicula interdum ex sed pharetra. Praesent auctor ullamcorper aliquam. Nunc
+                                luctus ante libero, in iaculis arcu pellentesque sit amet.
+                            </p>
+                        </li>
+                        <li>
+                            <img src="./assets/img/ico/b_2.svg" alt="Icon" class="benefits__ico">
+                            <h3 class="benefits__title">Integer porta euismod egestas</h3>
+                            <p class="benefits__text">
+                                Donec vehicula interdum ex sed pharetra. Praesent auctor ullamcorper aliquam. Nunc
+                                luctus ante libero, in iaculis arcu pellentesque sit amet.
+                            </p>
+                        </li>
+                        <li>
+                            <img src="./assets/img/ico/b_3.svg" alt="Icon" class="benefits__ico">
+                            <h3 class="benefits__title">Integer porta euismod egestas</h3>
+                            <p class="benefits__text">
+                                Donec vehicula interdum ex sed pharetra. Praesent auctor ullamcorper aliquam. Nunc
+                                luctus ante libero, in iaculis arcu pellentesque sit amet.
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="benefits__preview">
+                        <img src="./assets/img/benefits.jpg" alt="Picture">
+                    </div>
+                    <ul class="benefits__list">
+                        <li>
+                            <img src="./assets/img/ico/b_4.svg" alt="Icon" class="benefits__ico">
+                            <h3 class="benefits__title">Integer porta euismod egestas</h3>
+                            <p class="benefits__text">
+                                Donec vehicula interdum ex sed pharetra. Praesent auctor ullamcorper aliquam. Nunc
+                                luctus ante libero, in iaculis arcu pellentesque sit amet.
+                            </p>
+                        </li>
+                        <li>
+                            <img src="./assets/img/ico/b_5.svg" alt="Icon" class="benefits__ico">
+                            <h3 class="benefits__title">Integer porta euismod egestas</h3>
+                            <p class="benefits__text">
+                                Donec vehicula interdum ex sed pharetra. Praesent auctor ullamcorper aliquam. Nunc
+                                luctus ante libero, in iaculis arcu pellentesque sit amet.
+                            </p>
+                        </li>
+                        <li>
+                            <img src="./assets/img/ico/b_6.svg" alt="Icon" class="benefits__ico">
+                            <h3 class="benefits__title">Integer porta euismod egestas</h3>
+                            <p class="benefits__text">
+                                Donec vehicula interdum ex sed pharetra. Praesent auctor ullamcorper aliquam. Nunc
+                                luctus ante libero, in iaculis arcu pellentesque sit amet.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="circles">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-head__subtitle">
+                        Maecenas sodales neque
+                    </p>
+                    <h2 class="section-head__title content-title">
+                        Gute Vertriebler zu finden ist nicht leicht<span>.</span>
+                    </h2>
+                    <p class="section-head__text">
+                        Curabitur commodo diam a maximus placerat. Phasellus mollis orci elit, vel rhoncus ligula
+                        pretium quis.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="present">
+            <img src="./assets/img/pres.jpg" alt="" class="present__bg">
+            <div class="container">
+                <div class="present__content">
+                    <div class="present__info">
+                        <p class="present__subtitle">Maecenas sodales neque</p>
+                        <h2 class="present__title">
+                            Praesent acuan justo fermentum
+                        </h2>
+                    </div>
+                    <div class="present__descr">
+                        <p class="present__text">
+                            Vivamus at pellentesque ipsum. Donec molestie eleifend nisl eget euismod. Phasellus metus
+                            lacus, finibus non mauris quis, pulvinar varius nibh. Ut vehicula at lectus in volutpat.
+                            Cras condimentum fermentum diam sit amet faucibus. Phasellus congue luctus libero a
+                            hendrerit. Fusce metus ex, pharetra eu erat non, lacinia interdum neque. Donec quam risus,
+                            imperdiet quis mauris at, maximus tristique leo.
+                        </p>
+                        <a href="javascript: void(0)" class="present__link cta cta--accent">
+                            Jetzt Termin Buchen
+                        </a>
+                    </div>
+                    <div class="testiominials-box">
+                        <span class="testiominials-box__val">4.9</span>
+                        <div class="testiominials-box__stars">
+                            <img src="./assets/img/ico/star.svg" alt="Star">
+                            <img src="./assets/img/ico/star.svg" alt="Star">
+                            <img src="./assets/img/ico/star.svg" alt="Star">
+                            <img src="./assets/img/ico/star.svg" alt="Star">
+                            <img src="./assets/img/ico/star.svg" alt="Star">
+                        </div>
+                        <div class="testiominials-box__users">
+                            <img src="./assets/img/ico/user_1.png" alt="Picture">
+                            <img src="./assets/img/ico/user_2.png" alt="Picture">
+                            <img src="./assets/img/ico/user_3.png" alt="Picture">
+                            <img src="./assets/img/ico/user_4.png" alt="Picture">
+                        </div>
+                        <p class="testiominials-box__text">
+                            10K+ Clients Reviews
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="features">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-head__subtitle">
+                        Maecenas sodales neque
+                    </p>
+                    <h2 class="section-head__title content-title">
+                        Gute Vertriebler zu finden ist nicht leicht<span>.</span>
+                    </h2>
+                    <p class="section-head__text">
+                        Curabitur commodo diam a maximus placerat. Phasellus mollis orci elit, vel rhoncus ligula
+                        pretium quis.
+                    </p>
+                </div>
+                <ul class="features__cards">
+                    <li class="features__card">
+                        <div class="features__card-head">
+                            <img src="./assets/img/ico/ico-no.svg" alt="Icon">
+                            <p>ohne externem sales team</p>
+                        </div>
+                        <ul class="features__card-list">
+                            <li>
+                                <h3>
+                                    1. Nam pulvinar quam quam, id facilisis augue viverra eget maximus ipsum
+                                </h3>
+                                <p>
+                                    Nulla quis varius urna, eu suscipit felis. Proin quis lobortis nisi. In a aliquam
+                                    ligula, ac tristique nibh.
+                                </p>
+                            </li>
+                            <li>
+                                <h3>
+                                    2. Nam pulvinar quam quam, id facilisis augue viverra eget maximus ipsum
+                                </h3>
+                                <p>
+                                    Nulla quis varius urna, eu suscipit felis. Proin quis lobortis nisi. In a aliquam
+                                    ligula, ac tristique nibh.
+                                </p>
+                            </li>
+                            <li>
+                                <h3>
+                                    3. Nam pulvinar quam quam, id facilisis augue viverra eget maximus ipsum
+                                </h3>
+                                <p>
+                                    Nulla quis varius urna, eu suscipit felis. Proin quis lobortis nisi. In a aliquam
+                                    ligula, ac tristique nibh.
+                                </p>
+                            </li>
+                            <li>
+                                <h3>
+                                    4. Nam pulvinar quam quam, id facilisis augue viverra eget maximus ipsum
+                                </h3>
+                                <p>
+                                    Nulla quis varius urna, eu suscipit felis.
+                                </p>
+                            </li>
+                            <li>
+                                <h3>
+                                    5. Nam pulvinar quam quam, id facilisis augue viverra eget maximus ipsum
+                                </h3>
+                                <p>
+                                    Nulla quis varius urna, eu suscipit felis. Proin quis lobortis nisi. In a aliquam
+                                    ligula, ac tristique nibh.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="features__card">
+                        <div class="features__logo">
+                            <img src="./assets/img/ico/logo_dkr.png" alt="Logo">
+                        </div>
+                        <div class="features__card-head">
+                            <img src="./assets/img/ico/ico-yes.svg" alt="Icon">
+                            <p>mit externem sales team</p>
+                        </div>
+                        <ul class="features__card-list">
+                            <li>
+                                <h3>
+                                    1. Nam pulvinar quam quam, id facilisis augue viverra eget maximus ipsum
+                                </h3>
+                                <p>
+                                    Nulla quis varius urna, eu suscipit felis. Proin quis lobortis nisi. In a aliquam
+                                    ligula, ac tristique nibh. Integer leo turpis, dignissim at mollis at, aliquam vel
+                                    tellus.
+                                </p>
+                            </li>
+                            <li>
+                                <h3>
+                                    2. Nam pulvinar quam quam, id facilisis augue viverra eget maximus ipsum
+                                </h3>
+                                <p>
+                                    Nulla quis varius urna, eu suscipit felis. Proin quis lobortis nisi. In a aliquam
+                                    ligula, ac tristique nibh. Integer leo turpis, dignissim at mollis at, aliquam vel
+                                    tellus.
+                                </p>
+                            </li>
+                            <li>
+                                <h3>
+                                    3. Nam pulvinar quam quam, id facilisis augue viverra eget maximus ipsum
+                                </h3>
+                                <p>
+                                    Nulla quis varius urna, eu suscipit felis. Proin quis lobortis nisi. In a aliquam
+                                    ligula, ac tristique nibh. Integer leo turpis, dignissim at mollis at, aliquam vel
+                                    tellus.
+                                </p>
+                            </li>
+                            <li>
+                                <h3>
+                                    4. Nam pulvinar quam quam, id facilisis augue viverra eget maximus ipsum
+                                </h3>
+                                <p>
+                                    Nulla quis varius urna, eu suscipit felis. Proin quis lobortis nisi. In a aliquam
+                                    ligula, ac tristique nibh. Integer leo turpis, dignissim at mollis at, aliquam vel
+                                    tellus.
+                                </p>
+                            </li>
+                            <li>
+                                <h3>
+                                    5. Nam pulvinar quam quam, id facilisis augue viverra eget maximus ipsum
+                                </h3>
+                                <p>
+                                    Nulla quis varius urna, eu suscipit felis. Proin quis lobortis nisi. In a aliquam
+                                    ligula, ac tristique nibh. Integer leo turpis, dignissim at mollis at, aliquam vel
+                                    tellus.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="javasctipt: void(0)" class="features__link cta cta--drk">
+                    Jetzt Termin Buchen
+                </a>
+            </div>
+        </section>
+        <section class="partners">
+            <div class="container">
+                <ul class="partners__list">
+                    <li class="partners__item">
+                        <img src="./assets/img/amazon.png" alt="Amazon">
+                    </li>
+                    <li class="partners__item">
+                        <img src="./assets/img/nike.png" alt="Nike">
+                    </li>
+                    <li class="partners__item">
+                        <img src="./assets/img/sony.png" alt="Sony">
+                    </li>
+                    <li class="partners__item">
+                        <img src="./assets/img/disnay.png" alt="Disnay">
+                    </li>
+                    <li class="partners__item">
+                        <img src="./assets/img/toyota.png" alt="Toyota">
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="achiev">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-head__subtitle">
+                        Maecenas sodales neque
+                    </p>
+                    <h2 class="section-head__title content-title">
+                        Gute Vertriebler zu finden ist nicht leicht<span>.</span>
+                    </h2>
+                    <p class="section-head__text">
+                        Curabitur commodo diam a maximus placerat. Phasellus mollis orci elit, vel rhoncus ligula
+                        pretium quis.
+                    </p>
+                </div>
+                <ul class="achiev__list">
+                    <li class="achiev__item">
+                        <div class="achiev__item-info">
+                            <div class="achiev__item-ico">
+                                <img src="./assets/img/ico/ach_1.svg" alt="Icon">
+                            </div>
+                            <div class="achiev__item-descr">
+                                <span class="achiev__item-val">15M</span>
+                                <p class="achiev__item-text">
+                                    Over 15 <span>million in revenue per year</span> for our customers
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="achiev__item">
+                        <div class="achiev__item-info">
+                            <div class="achiev__item-ico">
+                                <img src="./assets/img/ico/ach_2.svg" alt="Icon">
+                            </div>
+                            <div class="achiev__item-descr">
+                                <span class="achiev__item-val">25M</span>
+                                <p class="achiev__item-text">
+                                    Over 15 <span>million in revenue per year</span> for our customers
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="achiev__item">
+                        <div class="achiev__item-info">
+                            <div class="achiev__item-ico">
+                                <img src="./assets/img/ico/ach_3.svg" alt="Icon">
+                            </div>
+                            <div class="achiev__item-descr">
+                                <span class="achiev__item-val">240</span>
+                                <p class="achiev__item-text">
+                                    With sales outsourcing: <span>240 new customers</span> per year
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="achiev__item achiev__item--md">
+                        <div class="achiev__item-info">
+                            <div class="achiev__item-ico">
+                                <img src="./assets/img/ico/ach_4.svg" alt="Icon">
+                            </div>
+                            <div class="achiev__item-descr">
+                                <span class="achiev__item-val">20,000€-25,000€</span>
+                                <p class="achiev__item-text">
+                                    In cold calling: 24 new customers per year on average, <span>purchase value
+                                        20k€-250k€ per customer</span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="achiev__item achiev__item--md">
+                        <div class="achiev__item-info">
+                            <div class="achiev__item-ico">
+                                <img src="./assets/img/ico/ach_5.svg" alt="Icon">
+                            </div>
+                            <div class="achiev__item-descr">
+                                <span class="achiev__item-val">100+</span>
+                                <p class="achiev__item-text">
+                                    Have already been at multiple trade shows and
+                                    <span>generate 100+ leads at trade shows</span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="achiev__item achiev__item--lg">
+                        <div class="achiev__item-info">
+                            <div class="achiev__item-ico">
+                                <img src="./assets/img/ico/ach_6.svg" alt="Icon">
+                            </div>
+                            <div class="achiev__item-descr">
+                                <span class="achiev__item-val">20,000€-250,00€</span>
+                                <p class="achiev__item-text">
+                                    With appointment setting:
+                                    <span>2 new customers from 10 appointments</span> who
+                                    purchase with a value between <span>20,000€</span> and <span>250,000€</span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="branches section-green">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-head__subtitle">
+                        Maecenas sodales neque
+                    </p>
+                    <h2 class="section-head__title content-title">
+                        Gute Vertriebler zu finden ist nicht leicht<span>.</span>
+                    </h2>
+                    <p class="section-head__text">
+                        Curabitur commodo diam a maximus placerat. Phasellus mollis orci elit, vel rhoncus ligula
+                        pretium quis.
+                    </p>
+                </div>
+                <div class="branches__content swiper js-branches-slider">
+                    <div class="branches__content-wrapper swiper-wrapper">
+                        <div class="branches__content-slide swiper-slide">
+                            <div class="branches-box">
+                                <div class="branches-box__info">
+                                    <img src="./assets/img/gallery-logo.png" alt="Logo" class="branches-box__logo">
+                                    <h3 class="branches-box__title">
+                                        Pellentesque habitant morbi tristique
+                                    </h3>
+                                    <p class="branches-box__text">
+                                        Donec pharetra commodo leo, in porttitor turpis posuere ac. Ut ultrices ultrices
+                                        purus sed molestie. Cras aliquam eleifend consequat. Morbi et porta magna, eget
+                                        bibendum arcu. Pellentesque habitant morbi tristique senectus et netus et
+                                        malesuada fames ac turpis egestas. Donec vitae libero congue, consequat diam et,
+                                        fermentum justo. Duis non augue eu odio porttitor sodales. Aliquam molestie,
+                                        nisi vitae vehicula scelerisque, neque est posuere tellus, in posuere eros arcu
+                                        a erat. Ut eu orci at elit convallis sagittis. Pellentesque finibus congue eros,
+                                        ac scelerisque libero feugiat vel.
+                                    </p>
+                                    <a href="javascript: void(0)" class="branches-box__link cta cta--lght">Jetzt Termin
+                                        Buchen</a>
+                                </div>
+                                <div class="branches-box__preview">
+                                    <img src="./assets/img/gallery.jpg" alt="Picture">
+                                    <div class="branches-box__stats">
+                                        <div class="branches-box__stat">
+                                            <p class="branches-box__subtitle">Average income</p>
+                                            <span class="branches-box__val">$100K+</span>
+                                        </div>
+                                        <div class="branches-box__stat">
+                                            <p class="branches-box__subtitle">Total appointments</p>
+                                            <span class="branches-box__val">150+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="branches__content-slide swiper-slide">
+                            <div class="branches-box">
+                                <div class="branches-box__info">
+                                    <img src="./assets/img/gallery-logo.png" alt="Logo" class="branches-box__logo">
+                                    <h3 class="branches-box__title">
+                                        Pellentesque habitant morbi tristique
+                                    </h3>
+                                    <p class="branches-box__text">
+                                        Donec pharetra commodo leo, in porttitor turpis posuere ac. Ut ultrices ultrices
+                                        purus sed molestie. Cras aliquam eleifend consequat. Morbi et porta magna, eget
+                                        bibendum arcu. Pellentesque habitant morbi tristique senectus et netus et
+                                        malesuada fames ac turpis egestas. Donec vitae libero congue, consequat diam et,
+                                        fermentum justo. Duis non augue eu odio porttitor sodales. Aliquam molestie,
+                                        nisi vitae vehicula scelerisque, neque est posuere tellus, in posuere eros arcu
+                                        a erat. Ut eu orci at elit convallis sagittis. Pellentesque finibus congue eros,
+                                        ac scelerisque libero feugiat vel.
+                                    </p>
+                                    <a href="javascript: void(0)" class="branches-box__link cta cta--lght">Jetzt Termin
+                                        Buchen</a>
+                                </div>
+                                <div class="branches-box__preview">
+                                    <img src="./assets/img/gallery.jpg" alt="Picture">
+                                    <div class="branches-box__stats">
+                                        <div class="branches-box__stat">
+                                            <p class="branches-box__subtitle">Average income</p>
+                                            <span class="branches-box__val">$100K+</span>
+                                        </div>
+                                        <div class="branches-box__stat">
+                                            <p class="branches-box__subtitle">Total appointments</p>
+                                            <span class="branches-box__val">150+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-navigation slider-navigation--lght">
+                    <button type="button" class="slider-navigation__btn js-branches-prev">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.61667 12.5167L0.75 6.63333L6.61667 0.75" stroke="#1A1A1A" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button type="button" class="slider-navigation__btn js-branches-next">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.75 12.5167L6.61667 6.63333L0.75 0.75" stroke="#1A1A1A" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="works">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-head__subtitle">
+                        Maecenas sodales neque
+                    </p>
+                    <h2 class="section-head__title content-title">
+                        Gute Vertriebler zu finden ist nicht leicht<span>.</span>
+                    </h2>
+                    <p class="section-head__text">
+                        Curabitur commodo diam a maximus placerat. Phasellus mollis orci elit, vel rhoncus ligula
+                        pretium quis.
+                    </p>
+                </div>
+                <ul class="works__cards">
+                    <li class="works__card">
+                        <img src="./assets/img/works.jpg" alt="Picture" class="works__pic">
+                        <h3 class="works__title">
+                            Suspendisse laoreet nisi potitor
+                        </h3>
+                        <p class="works__text">
+                            Curabitur non lobortis eros, nec euismod nisi. Nulla ornare iaculis sem in iaculis.
+                        </p>
+                        <ul class="works__list">
+                            <li>
+                                Praesent in urna feugiat <span>+25% nunc eu</span>, interdum tellus
+                            </li>
+                            <li>
+                                Purus in urna feugiat, <span>mollis nunc</span> interdum tellus
+                            </li>
+                            <li>
+                                Aenean nec risus et <span>ante 5000 posuere</span> pretium id ac purus
+                            </li>
+                        </ul>
+                        <a href="javascript: void(0)" class="works__link cta cta--olive">Jetzt Termin Buchen</a>
+                    </li>
+                    <li class="works__card">
+                        <img src="./assets/img/works.jpg" alt="Picture" class="works__pic">
+                        <h3 class="works__title">
+                            Suspendisse laoreet nisi potitor
+                        </h3>
+                        <p class="works__text">
+                            Curabitur non lobortis eros, nec euismod nisi. Nulla ornare iaculis sem in iaculis.
+                        </p>
+                        <ul class="works__list">
+                            <li>
+                                Praesent in urna feugiat <span>+25% nunc eu</span>, interdum tellus
+                            </li>
+                            <li>
+                                Purus in urna feugiat, <span>mollis nunc</span> interdum tellus
+                            </li>
+                            <li>
+                                Aenean nec risus et <span>ante 5000 posuere</span> pretium id ac purus
+                            </li>
+                        </ul>
+                        <a href="javascript: void(0)" class="works__link cta cta--olive">Jetzt Termin Buchen</a>
+                    </li>
+                    <li class="works__card">
+                        <img src="./assets/img/works.jpg" alt="Picture" class="works__pic">
+                        <h3 class="works__title">
+                            Suspendisse laoreet nisi potitor
+                        </h3>
+                        <p class="works__text">
+                            Curabitur non lobortis eros, nec euismod nisi. Nulla ornare iaculis sem in iaculis.
+                        </p>
+                        <ul class="works__list">
+                            <li>
+                                Praesent in urna feugiat <span>+25% nunc eu</span>, interdum tellus
+                            </li>
+                            <li>
+                                Purus in urna feugiat, <span>mollis nunc</span> interdum tellus
+                            </li>
+                            <li>
+                                Aenean nec risus et <span>ante 5000 posuere</span> pretium id ac purus
+                            </li>
+                        </ul>
+                        <a href="javascript: void(0)" class="works__link cta cta--olive">Jetzt Termin Buchen</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="video section-green">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-head__subtitle">
+                        Maecenas sodales neque
+                    </p>
+                    <h2 class="section-head__title content-title">
+                        Gute Vertriebler zu finden ist nicht leicht<span>.</span>
+                    </h2>
+                    <p class="section-head__text">
+                        Curabitur commodo diam a maximus placerat. Phasellus mollis orci elit, vel rhoncus ligula
+                        pretium quis.
+                    </p>
+                </div>
+                <div class="video__box js-video-wrapper">
+                    <video class="js-video" playsinline="" poster="./assets/img/video.jpg">
+                        <source src="./assets/video/video.mp4" type="video/mp4">
+                        Your browser does not support the tag.
+                    </video>
+                    <button type="button" class="video__play js-video-play">
+                        <img src="./assets/img/ico/ico-play.svg" alt="Play">
+                    </button>
+                </div>
+                <a href="javascript: void(0)" class="video__link cta cta--lght">
+                    Jetzt Termin Buchen
+                </a>
+                <div class="testiominials-box">
+                    <span class="testiominials-box__val">4.9</span>
+                    <div class="testiominials-box__stars">
+                        <img src="./assets/img/ico/star.svg" alt="Star">
+                        <img src="./assets/img/ico/star.svg" alt="Star">
+                        <img src="./assets/img/ico/star.svg" alt="Star">
+                        <img src="./assets/img/ico/star.svg" alt="Star">
+                        <img src="./assets/img/ico/star.svg" alt="Star">
+                    </div>
+                    <div class="testiominials-box__users">
+                        <img src="./assets/img/ico/user_1.png" alt="Picture">
+                        <img src="./assets/img/ico/user_2.png" alt="Picture">
+                        <img src="./assets/img/ico/user_3.png" alt="Picture">
+                        <img src="./assets/img/ico/user_4.png" alt="Picture">
+                    </div>
+                    <p class="testiominials-box__text">
+                        10K+ Clients Reviews
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="history">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-head__subtitle">
+                        Maecenas sodales neque
+                    </p>
+                    <h2 class="section-head__title content-title">
+                        Gute Vertriebler zu finden ist nicht leicht<span>.</span>
+                    </h2>
+                    <p class="section-head__text">
+                        Curabitur commodo diam a maximus placerat. Phasellus mollis orci elit, vel rhoncus ligula
+                        pretium quis.
+                    </p>
+                </div>
+                <div class="history__team">
+                    <div class="history__preview">
+                        <img src="./assets/img/history.jpg" alt="Picture">
+                        <div class="history__label">
+                            <p>Onpoint<span>.</span></p>
+                            <p>Aenean et metus consectetur</p>
+                        </div>
+                    </div>
+                    <div class="history__description">
+                        <div class="history__logo">
+                            <img src="./assets/img/ico/logo_dkr.png" alt="Logo">
+                        </div>
+                        <h2 class="history__title">Suspendisse tempor lacinia porta</h2>
+                        <p class="history__text">
+                            Suspendisse facilisis neque iaculis turpis dapibus gravida sit amet eget sapien. Nam egestas
+                            bibendum justo quis scelerisque. Curabitur nibh sapien, tincidunt ut ligula quis,
+                            condimentum lobortis ipsum. Cras non dapibus urna. Aenean et metus consectetur, accumsan
+                            quam eget, eleifend dui. Etiam mattis orci nulla.
+                        </p>
+                        <p class="history__text">
+                            Quisque pretium magna at augue malesuada condimentum. Suspendisse tempor lacinia porta. In
+                            nisi velit, rutrum vel tortor ut, hendrerit egestas tellus. Morbi a maximus tortor. Aliquam
+                            quis lacus mattis, fermentum nisi a, blandit nunc. Nunc vehicula diam ligula, eget consequat
+                            ante hendrerit et. Aenean eget orci mi. Quisque venenatis interdum lectus, euismod rutrum
+                            purus pharetra quis.
+                        </p>
+                        <a href="javascript: void(0)" class="history__link cta cta--olive">
+                            Jetzt Termin Buchen
+                        </a>
+                    </div>
+                </div>
+                <div class="history__employees">
+                    <div class="history__employee">
+                        <img src="./assets/img/empl_1.jpg" alt="Picture">
+                        <div class="history__label">
+                            <p>John Doe</p>
+                            <p>CEO and Co-founder of Onpoint</p>
+                        </div>
+                    </div>
+                    <div class="history__employee">
+                        <img src="./assets/img/empl_2.jpg" alt="Picture">
+                        <div class="history__label">
+                            <p>Anna Fox</p>
+                            <p>CTO and Co-founder of Onpoint</p>
+                        </div>
+                    </div>
+                    <div class="history__employee">
+                        <img src="./assets/img/empl_3.jpg" alt="Picture">
+                        <div class="history__label">
+                            <p>Richard Lowrence</p>
+                            <p>Art director of Onpoint</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="javascript: void(0)" class="history__cta cta cta--olive">
+                    Jetzt Termin Buchen
+                </a>
+            </div>
+        </section>
+        <section class="carousel">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-head__subtitle">
+                        Maecenas sodales neque
+                    </p>
+                    <h2 class="section-head__title content-title">
+                        Gute Vertriebler zu finden ist nicht leicht<span>.</span>
+                    </h2>
+                    <p class="section-head__text">
+                        Curabitur commodo diam a maximus placerat. Phasellus mollis orci elit, vel rhoncus ligula
+                        pretium quis.
+                    </p>
+                </div>
+                <div class="carousel__content swiper js-carousel-slider">
+                    <div class="carousel__content-wrapper swiper-wrapper">
+                        <div class="carousel__content-slide swiper-slide">
+                            <div class="carousel-box">
+                                <div class="carousel-box__preview">
+                                    <div class="carousel-box__pic">
+                                        <img src="./assets/img/carousel.jpg" alt="Picture">
+                                    </div>
+                                    <div class="carousel-box__descr">
+                                        <p>SALES<span>.</span></p>
+                                        <p>ON POINT<span>.</span></p>
+                                    </div>
+                                </div>
+                                <div class="carousel-box__info">
+                                    <ul class="carousel-box__soc">
+                                        <li>
+                                            <a href="javascript: void(0)">
+                                                <img src="./assets/img/ico/ico-apple.svg" alt="Apple">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">
+                                                <img src="./assets/img/ico/ico-spoty.svg" alt="Spotify">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">
+                                                <img src="./assets/img/ico/ico-youtube.svg" alt="YouTube">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <h3 class="carousel-box__title">
+                                        Curabitur nibh sapien tincidunt ut ligula quis accumsan
+                                    </h3>
+                                    <p class="carousel-box__text">
+                                        Quisque pretium magna at augue malesuada condimentum. Suspendisse tempor lacinia
+                                        porta. In nisi velit, rutrum vel tortor ut, hendrerit egestas tellus.
+                                    </p>
+                                    <a href="javascript: void(0)" class="carousel-box__link cta cta--olive">Jetzt Termin
+                                        Buchen</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel__content-slide swiper-slide">
+                            <div class="carousel-box">
+                                <div class="carousel-box__preview">
+                                    <div class="carousel-box__pic">
+                                        <img src="./assets/img/carousel.jpg" alt="Picture">
+                                    </div>
+                                    <div class="carousel-box__descr">
+                                        <p>SALES<span>.</span></p>
+                                        <p>ON POINT<span>.</span></p>
+                                    </div>
+                                </div>
+                                <div class="carousel-box__info">
+                                    <ul class="carousel-box__soc">
+                                        <li>
+                                            <a href="javascript: void(0)">
+                                                <img src="./assets/img/ico/ico-apple.svg" alt="Apple">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">
+                                                <img src="./assets/img/ico/ico-spoty.svg" alt="Spotify">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">
+                                                <img src="./assets/img/ico/ico-youtube.svg" alt="YouTube">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <h3 class="carousel-box__title">
+                                        Curabitur nibh sapien tincidunt ut ligula quis accumsan
+                                    </h3>
+                                    <p class="carousel-box__text">
+                                        Quisque pretium magna at augue malesuada condimentum. Suspendisse tempor lacinia
+                                        porta. In nisi velit, rutrum vel tortor ut, hendrerit egestas tellus.
+                                    </p>
+                                    <a href="javascript: void(0)" class="carousel-box__link cta cta--olive">Jetzt Termin
+                                        Buchen</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel__content-slide swiper-slide">
+                            <div class="carousel-box">
+                                <div class="carousel-box__preview">
+                                    <div class="carousel-box__pic">
+                                        <img src="./assets/img/carousel.jpg" alt="Picture">
+                                    </div>
+                                    <div class="carousel-box__descr">
+                                        <p>SALES<span>.</span></p>
+                                        <p>ON POINT<span>.</span></p>
+                                    </div>
+                                </div>
+                                <div class="carousel-box__info">
+                                    <ul class="carousel-box__soc">
+                                        <li>
+                                            <a href="javascript: void(0)">
+                                                <img src="./assets/img/ico/ico-apple.svg" alt="Apple">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">
+                                                <img src="./assets/img/ico/ico-spoty.svg" alt="Spotify">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">
+                                                <img src="./assets/img/ico/ico-youtube.svg" alt="YouTube">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <h3 class="carousel-box__title">
+                                        Curabitur nibh sapien tincidunt ut ligula quis accumsan
+                                    </h3>
+                                    <p class="carousel-box__text">
+                                        Quisque pretium magna at augue malesuada condimentum. Suspendisse tempor lacinia
+                                        porta. In nisi velit, rutrum vel tortor ut, hendrerit egestas tellus.
+                                    </p>
+                                    <a href="javascript: void(0)" class="carousel-box__link cta cta--olive">Jetzt Termin
+                                        Buchen</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel__content-slide swiper-slide">
+                            <div class="carousel-box">
+                                <div class="carousel-box__preview">
+                                    <div class="carousel-box__pic">
+                                        <img src="./assets/img/carousel.jpg" alt="Picture">
+                                    </div>
+                                    <div class="carousel-box__descr">
+                                        <p>SALES<span>.</span></p>
+                                        <p>ON POINT<span>.</span></p>
+                                    </div>
+                                </div>
+                                <div class="carousel-box__info">
+                                    <ul class="carousel-box__soc">
+                                        <li>
+                                            <a href="javascript: void(0)">
+                                                <img src="./assets/img/ico/ico-apple.svg" alt="Apple">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">
+                                                <img src="./assets/img/ico/ico-spoty.svg" alt="Spotify">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">
+                                                <img src="./assets/img/ico/ico-youtube.svg" alt="YouTube">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <h3 class="carousel-box__title">
+                                        Curabitur nibh sapien tincidunt ut ligula quis accumsan
+                                    </h3>
+                                    <p class="carousel-box__text">
+                                        Quisque pretium magna at augue malesuada condimentum. Suspendisse tempor lacinia
+                                        porta. In nisi velit, rutrum vel tortor ut, hendrerit egestas tellus.
+                                    </p>
+                                    <a href="javascript: void(0)" class="carousel-box__link cta cta--olive">Jetzt Termin
+                                        Buchen</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-navigation slider-navigation--drk">
+                    <button type="button" class="slider-navigation__btn js-carousel-prev">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.61667 12.5167L0.75 6.63333L6.61667 0.75" stroke="#1A1A1A" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button type="button" class="slider-navigation__btn js-carousel-next">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.75 12.5167L6.61667 6.63333L0.75 0.75" stroke="#1A1A1A" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="owners">
+            <div class="container">
+                <div class="owners__content">
+                    <div class="owners__descr">
+                        <h2 class="owners__title content-title">
+                            Donec in tincidunt mattis lacus
+                        </h2>
+                        <p class="owners__text">
+                            Curabitur commodo diam a maximus placerat. Phasellus mollis orci elit, vel rhoncus ligula
+                            pretium quis.
+                            Sed bibendum non justo quis convallis. Vestibulum ante ipsum
+                        </p>
+                        <a href="javascript: void(0)" class="owners__link cta cta--lght">
+                            Jetzt Termin Buchen
+                        </a>
+                    </div>
+                    <div class="owners__man man-lft">
+                        <img src="./assets/img/man_1.png" alt="Picture">
+                    </div>
+                    <div class="owners__man man-rght">
+                        <img src="./assets/img/man_2.png" alt="Picture">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="partners">
+            <div class="container">
+                <ul class="partners__list">
+                    <li class="partners__item">
+                        <img src="./assets/img/amazon.png" alt="Amazon">
+                    </li>
+                    <li class="partners__item">
+                        <img src="./assets/img/nike.png" alt="Nike">
+                    </li>
+                    <li class="partners__item">
+                        <img src="./assets/img/sony.png" alt="Sony">
+                    </li>
+                    <li class="partners__item">
+                        <img src="./assets/img/disnay.png" alt="Disnay">
+                    </li>
+                    <li class="partners__item">
+                        <img src="./assets/img/toyota.png" alt="Toyota">
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="faq">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-head__subtitle">
+                        Maecenas sodales neque
+                    </p>
+                    <h2 class="section-head__title content-title">
+                        Gute Vertrieb<br>ler nicht leicht<span>.</span>
+                    </h2>
+                    <p class="section-head__text">
+                        Curabitur commodo diam a maximus placerat. Phasellus mollis orci elit, vel rhoncus ligula
+                        pretium quis.
+                    </p>
+                </div>
+                <ul class="faq__list">
+                    <li class="faq__item js-faq-box">
+                        <div class="faq__content">
+                            <div class="faq__wrapper">
+                                <h3 class="faq__title">
+                                    Sed laoreet, est quis gravida viverra, felis nisi aliquam eros, eu pretium dui sem
+                                    at
+                                    diam. In accumsan nunc vitae metus porttitor, nec porta arcu hendreri?
+                                </h3>
+                                <div class="faq__inner">
+                                    <p class="faq__text">
+                                        Sed laoreet, est quis gravida viverra, felis nisi aliquam eros, eu pretium dui
+                                        sem
+                                        at diam. In accumsan nunc vitae metus porttitor, nec porta arcu hendreri?
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="faq-deco">
+                                <div class="plusminus"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="faq__item js-faq-box">
+                        <div class="faq__content">
+                            <div class="faq__wrapper">
+                                <h3 class="faq__title">
+                                    Sed laoreet, est quis gravida viverra, felis nisi aliquam eros, eu pretium dui sem
+                                    at
+                                    diam. In accumsan nunc vitae metus porttitor, nec porta arcu hendreri?
+                                </h3>
+                                <div class="faq__inner">
+                                    <p class="faq__text">
+                                        Sed laoreet, est quis gravida viverra, felis nisi aliquam eros, eu pretium dui
+                                        sem
+                                        at diam. In accumsan nunc vitae metus porttitor, nec porta arcu hendreri?
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="faq-deco">
+                                <div class="plusminus"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="faq__item js-faq-box">
+                        <div class="faq__content">
+                            <div class="faq__wrapper">
+                                <h3 class="faq__title">
+                                    Sed laoreet, est quis gravida viverra, felis nisi aliquam eros, eu pretium dui sem
+                                    at
+                                    diam. In accumsan nunc vitae metus porttitor, nec porta arcu hendreri?
+                                </h3>
+                                <div class="faq__inner">
+                                    <p class="faq__text">
+                                        Sed laoreet, est quis gravida viverra, felis nisi aliquam eros, eu pretium dui
+                                        sem
+                                        at diam. In accumsan nunc vitae metus porttitor, nec porta arcu hendreri?
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="faq-deco">
+                                <div class="plusminus"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="faq__item js-faq-box">
+                        <div class="faq__content">
+                            <div class="faq__wrapper">
+                                <h3 class="faq__title">
+                                    Sed laoreet, est quis gravida viverra, felis nisi aliquam eros, eu pretium dui sem
+                                    at
+                                    diam. In accumsan nunc vitae metus porttitor, nec porta arcu hendreri?
+                                </h3>
+                                <div class="faq__inner">
+                                    <p class="faq__text">
+                                        Sed laoreet, est quis gravida viverra, felis nisi aliquam eros, eu pretium dui
+                                        sem
+                                        at diam. In accumsan nunc vitae metus porttitor, nec porta arcu hendreri?
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="faq-deco">
+                                <div class="plusminus"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="faq__item js-faq-box">
+                        <div class="faq__content">
+                            <div class="faq__wrapper">
+                                <h3 class="faq__title">
+                                    Sed laoreet, est quis gravida viverra, felis nisi aliquam eros, eu pretium dui sem
+                                    at
+                                    diam. In accumsan nunc vitae metus porttitor, nec porta arcu hendreri?
+                                </h3>
+                                <div class="faq__inner">
+                                    <p class="faq__text">
+                                        Sed laoreet, est quis gravida viverra, felis nisi aliquam eros, eu pretium dui
+                                        sem
+                                        at diam. In accumsan nunc vitae metus porttitor, nec porta arcu hendreri?
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="faq-deco">
+                                <div class="plusminus"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
-    <footer class="footer">footer</footer>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__panel">
+                <div class="footer__logo">
+                    <img src="./assets/img/ico/logo_dkr.png" alt="Logotype">
+                </div>
+                <div class="footer__controls">
+                    <div class="col">
+                        <p class="footer__title">Company name</p>
+                        <a href="javascript: void(0)" class="footer__address">
+                            Max Mustermann, Musterstraße 12, 12345 Berlin, Germany
+                        </a>
+                    </div>
+                    <div class="col">
+                        <p class="footer__title">Kontakt</p>
+                        <ul class="footer__contact">
+                            <li>
+                                <a href="tel:+0123456789">0123456789</a>
+                            </li>
+                            <li>
+                                <a href="mailto:hello@mail.de">hello@mail.de</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <p class="footer__title">Mehr</p>
+                        <div class="footer__nav">
+                            <ul>
+                                <li>
+                                    <a href="javascript: void(0)">Über uns</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Referenzen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Angebot</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul class="footer__media">
+                    <li>
+                        <a href="javascript: void(0)">
+                            <img src="./assets/img/ico/spotify.png" alt="Spotify">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0)">
+                            <img src="./assets/img/ico/apple.png" alt="Apple Music">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0)">
+                            <img src="./assets/img/ico/tube.png" alt="YouTube Music">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__info">
+            <div class="container">
+                <p class="footer__copy">© 2025 Onpoint. All rights reserved.</p>
+                <ul class="footer__legal">
+                    <li>
+                        <a target="_blank" href="javascript: void(0)">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="javascript: void(0)">Terms of Service</a>
+                    </li>
+                </ul>
+                <ul class="footer__socials">
+                    <li>
+                        <a target="_blank" href="javasctipt: void(0)">
+                            <img src="./assets/img/ico/ico-facebook.svg" alt="Facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="javasctipt: void(0)">
+                            <img src="./assets/img/ico/ico-link.svg" alt="LinkedIn">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="javasctipt: void(0)">
+                            <img src="./assets/img/ico/ico-tube.svg" alt="YouTube">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="javasctipt: void(0)">
+                            <img src="./assets/img/ico/ico-inst.svg" alt="Instagram">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

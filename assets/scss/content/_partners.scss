@@ -1,0 +1,23 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.partners {
+    margin-bottom: var(--section-mb);
+
+    &__list {
+        align-items: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(20);
+    }
+
+    &__item {
+        height: 100%;
+        width: 100%;
+        max-width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

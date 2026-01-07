@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font: 400 #{rem(16)}/1.5 var(--ff-base);
+    font: 400 #{rem(16)}/ 1.5 var(--ff-base);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -51,6 +51,14 @@ section,
     scroll-margin-top: var(--scrl-mt);
 }
 
-// section {
-//     margin-bottom: var(--section-mb);
-// }
+.section-green {
+    background: var(--drk-green);
+
+    .section-head {
+        color: var(--lght-green);
+
+        &__text {
+            color: #a1d2a0b2;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.section-head {
+    max-width: rem(1021);
+    margin: 0 auto #{rem(96)};
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+    text-align: center;
+
+    &__subtitle {
+        font: 900 #{rem(12)} / 150% var(--ff-base);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    &__text {
+        font: 400 #{rem(14)} / 150% var(--ff-base);
+        color: var(--color-dark_half);
+    }
+}

@@ -1,0 +1,74 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.works {
+    margin-bottom: var(--section-mb);
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: rem(24);
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        padding-inline: rem(8);
+    }
+
+    &__pic {
+        height: rem(418);
+        object-fit: cover;
+        border-radius: rem(20);
+        margin-bottom: rem(24);
+    }
+
+    &__title {
+        font: 800 #{rem(40)} / 120% var(--ff-accent);
+        text-transform: capitalize;
+        margin-bottom: rem(16);
+    }
+
+    &__text {
+        font: 400 #{rem(14)} / 150% var(--ff-accent);
+        margin-bottom: rem(24);
+        color: var(--color-dark_half);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16);
+        margin-bottom: rem(40);
+
+        li {
+            position: relative;
+            padding-left: rem(40);
+            font: 400 #{rem(14)} / 150% var(--ff-accent);
+            color: var(--color-dark_half);
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                display: inline-flex;
+                flex-shrink: 0;
+                width: rem(24);
+                height: rem(24);
+                background: url('../img/ico/ico-pic.svg') no-repeat
+                    center center / cover;
+            }
+
+            span {
+                font-weight: 800;
+                color: var(--color-dark);
+            }
+        }
+    }
+
+    &__link {
+        margin-top: auto;
+        width: max-content;
+    }
+}

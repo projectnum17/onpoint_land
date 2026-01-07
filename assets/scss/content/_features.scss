@@ -1,0 +1,103 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.features {
+    margin-bottom: var(--section-mb);
+
+    &__cards {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        margin-bottom: rem(96);
+    }
+
+    &__logo {
+        max-width: rem(231);
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: rem(24);
+
+        &:first-child {
+            max-width: rem(514);
+
+            .features__card-list,
+            .features__card-head {
+                background: var(--lght-green);
+                color: var(--drk-green);
+            }
+
+            .features__card-list li:not(:last-child) {
+                border-bottom: 1px solid #073735;
+            }
+        }
+
+        &:last-child {
+            transform: translateX(#{rem(-8)});
+            max-width: rem(530);
+
+            .features__card-list,
+            .features__card-head {
+                background: var(--drk-green);
+                color: var(--lght-green);
+                box-shadow: -7px 4px 10px 0px #00000026;
+            }
+
+            .features__card-list li:not(:last-child) {
+                border-bottom: 1px solid var(--lght-green);
+            }
+        }
+
+        &-list {
+            padding: rem(48) rem(40);
+            border-radius: rem(20);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: rem(16);
+
+            li {
+                display: flex;
+                flex-direction: column;
+                gap: rem(8);
+                padding-bottom: rem(16);
+            }
+
+            h3 {
+                font: 700 #{rem(18)} / 150% var(--ff-base);
+                margin: 0 0 rem(8) 0;
+            }
+
+            p {
+                font: 400 #{rem(14)} / 150% var(--ff-base);
+            }
+        }
+
+        &-head {
+            padding: rem(8);
+            display: flex;
+            align-items: center;
+            gap: rem(8);
+            border-radius: rem(10);
+            max-width: max-content;
+
+            img {
+                width: rem(24);
+                height: rem(24);
+            }
+
+            p {
+                font: 700 #{rem(14)} / 150% var(--ff-base);
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__link {
+        display: flex;
+        width: max-content;
+        margin: 0 auto;
+    }
+}
