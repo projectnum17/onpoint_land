@@ -1,0 +1,42 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    background: #fff;
+    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+    &.is-hide {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes pulseOpacity {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+}
+
+.loader img {
+    max-width: 300px;
+    animation: pulseOpacity 1.5s ease-in-out infinite;
+}
