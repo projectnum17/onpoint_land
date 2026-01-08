@@ -7,10 +7,9 @@
     <title>Onpoint | Land</title>
 
     <link rel="stylesheet" href="./assets/libs/swiper/swiper.min.css">
+    <link rel="stylesheet" href="./assets/libs/lenis/lenis.css">
+    <link rel="stylesheet" href="./assets/libs/odometer/odometer-theme-default.css">
     <link rel="stylesheet" href="./assets/css/style.min.css">
-
-    <script defer src="./assets/libs/swiper/swiper.min.js"></script>
-    <script defer type="module" src="./assets/js/main.js"></script>
 </head>
 
 <body>
@@ -41,7 +40,7 @@
         <section class="hero">
             <img src="./assets/img/hero.jpg" alt="" class="hero__bg">
             <div class="container">
-                <div class="hero__description">
+                <div class="hero__description js-bounce-anim">
                     <h1 class="hero__title">Dein neues Vertriebsteam<span>.</span></h1>
                     <p class="hero__about">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis purus a tellus accumsan
@@ -49,22 +48,25 @@
                         semper aliquam at a nunc.
                     </p>
                 </div>
-                <ul class="hero__info">
+                <ul class="hero__info js-bounce-anim">
                     <li class="hero__value">
                         <p class="hero__value-num">
-                            2<span>.</span>000K
+                            <span class="js-odometer" data-number="2000">0</span>K
                         </p>
                         <p class="hero__value-text">Sales Calls geführt</p>
                     </li>
                     <li class="hero__value">
                         <p class="hero__value-num">
-                            5+
+                            <span class="js-odometer" data-number="5">0</span>+
                         </p>
                         <p class="hero__value-text">Jahre am Markt</p>
                     </li>
                     <li class="hero__value">
                         <p class="hero__value-num">
-                            5M<span>.</span> €
+                            <span class="js-odometer" data-number="5">0</span>
+                            <span>M</span>
+                            <span class="dot">.</span>
+                            <span>€</span>
                         </p>
                         <p class="hero__value-text">Umsatz generiert</p>
                     </li>
@@ -74,10 +76,10 @@
         <section class="benefits">
             <div class="container">
                 <div class="section-head">
-                    <p class="section-head__subtitle">
+                    <p class="section-head__subtitle js-title-anim" data-title-animation>
                         Maecenas sodales neque
                     </p>
-                    <h2 class="section-head__title content-title">
+                    <h2 class="section-head__title content-title js-title-anim" data-title-animation>
                         Gute Vertriebler zu finden ist nicht leicht<span>.</span>
                     </h2>
                     <p class="section-head__text">
@@ -89,7 +91,8 @@
                     <ul class="benefits__list">
                         <li>
                             <img src="./assets/img/ico/b_1.svg" alt="Icon" class="benefits__ico">
-                            <h3 class="benefits__title">Integer porta euismod egestas</h3>
+                            <h3 class="benefits__title js-title-anim" data-title-animation>Integer porta euismod egestas
+                            </h3>
                             <p class="benefits__text">
                                 Donec vehicula interdum ex sed pharetra. Praesent auctor ullamcorper aliquam. Nunc
                                 luctus ante libero, in iaculis arcu pellentesque sit amet.
@@ -97,7 +100,8 @@
                         </li>
                         <li>
                             <img src="./assets/img/ico/b_2.svg" alt="Icon" class="benefits__ico">
-                            <h3 class="benefits__title">Integer porta euismod egestas</h3>
+                            <h3 class="benefits__title js-title-anim" data-title-animation>Integer porta euismod egestas
+                            </h3>
                             <p class="benefits__text">
                                 Donec vehicula interdum ex sed pharetra. Praesent auctor ullamcorper aliquam. Nunc
                                 luctus ante libero, in iaculis arcu pellentesque sit amet.
@@ -105,20 +109,22 @@
                         </li>
                         <li>
                             <img src="./assets/img/ico/b_3.svg" alt="Icon" class="benefits__ico">
-                            <h3 class="benefits__title">Integer porta euismod egestas</h3>
+                            <h3 class="benefits__title js-title-anim" data-title-animation>Integer porta euismod egestas
+                            </h3>
                             <p class="benefits__text">
                                 Donec vehicula interdum ex sed pharetra. Praesent auctor ullamcorper aliquam. Nunc
                                 luctus ante libero, in iaculis arcu pellentesque sit amet.
                             </p>
                         </li>
                     </ul>
-                    <div class="benefits__preview">
+                    <div class="benefits__preview js-move-animate">
                         <img src="./assets/img/benefits.jpg" alt="Picture">
                     </div>
                     <ul class="benefits__list">
                         <li>
                             <img src="./assets/img/ico/b_4.svg" alt="Icon" class="benefits__ico">
-                            <h3 class="benefits__title">Integer porta euismod egestas</h3>
+                            <h3 class="benefits__title js-title-anim" data-title-animation>Integer porta euismod egestas
+                            </h3>
                             <p class="benefits__text">
                                 Donec vehicula interdum ex sed pharetra. Praesent auctor ullamcorper aliquam. Nunc
                                 luctus ante libero, in iaculis arcu pellentesque sit amet.
@@ -126,7 +132,8 @@
                         </li>
                         <li>
                             <img src="./assets/img/ico/b_5.svg" alt="Icon" class="benefits__ico">
-                            <h3 class="benefits__title">Integer porta euismod egestas</h3>
+                            <h3 class="benefits__title js-title-anim" data-title-animation>Integer porta euismod egestas
+                            </h3>
                             <p class="benefits__text">
                                 Donec vehicula interdum ex sed pharetra. Praesent auctor ullamcorper aliquam. Nunc
                                 luctus ante libero, in iaculis arcu pellentesque sit amet.
@@ -134,7 +141,8 @@
                         </li>
                         <li>
                             <img src="./assets/img/ico/b_6.svg" alt="Icon" class="benefits__ico">
-                            <h3 class="benefits__title">Integer porta euismod egestas</h3>
+                            <h3 class="benefits__title js-title-anim" data-title-animation>Integer porta euismod egestas
+                            </h3>
                             <p class="benefits__text">
                                 Donec vehicula interdum ex sed pharetra. Praesent auctor ullamcorper aliquam. Nunc
                                 luctus ante libero, in iaculis arcu pellentesque sit amet.
@@ -147,10 +155,10 @@
         <section class="circles">
             <div class="container">
                 <div class="section-head">
-                    <p class="section-head__subtitle">
+                    <p class="section-head__subtitle js-title-anim" data-title-animation>
                         Maecenas sodales neque
                     </p>
-                    <h2 class="section-head__title content-title">
+                    <h2 class="section-head__title content-title js-title-anim" data-title-animation>
                         Gute Vertriebler zu finden ist nicht leicht<span>.</span>
                     </h2>
                     <p class="section-head__text">
@@ -165,8 +173,8 @@
             <div class="container">
                 <div class="present__content">
                     <div class="present__info">
-                        <p class="present__subtitle">Maecenas sodales neque</p>
-                        <h2 class="present__title">
+                        <p class="present__subtitle js-title-anim" data-title-animation>Maecenas sodales neque</p>
+                        <h2 class="present__title js-title-anim" data-title-animation>
                             Praesent acuan justo fermentum
                         </h2>
                     </div>
@@ -207,10 +215,10 @@
         <section class="features">
             <div class="container">
                 <div class="section-head">
-                    <p class="section-head__subtitle">
+                    <p class="section-head__subtitle js-title-anim" data-title-animation>
                         Maecenas sodales neque
                     </p>
-                    <h2 class="section-head__title content-title">
+                    <h2 class="section-head__title content-title js-title-anim" data-title-animation>
                         Gute Vertriebler zu finden ist nicht leicht<span>.</span>
                     </h2>
                     <p class="section-head__text">
@@ -362,10 +370,10 @@
         <section class="achiev">
             <div class="container">
                 <div class="section-head">
-                    <p class="section-head__subtitle">
+                    <p class="section-head__subtitle js-title-anim" data-title-animation>
                         Maecenas sodales neque
                     </p>
-                    <h2 class="section-head__title content-title">
+                    <h2 class="section-head__title content-title js-title-anim" data-title-animation>
                         Gute Vertriebler zu finden ist nicht leicht<span>.</span>
                     </h2>
                     <p class="section-head__text">
@@ -373,14 +381,16 @@
                         pretium quis.
                     </p>
                 </div>
-                <ul class="achiev__list">
+                <ul class="achiev__list js-move-animate">
                     <li class="achiev__item">
                         <div class="achiev__item-info">
                             <div class="achiev__item-ico">
                                 <img src="./assets/img/ico/ach_1.svg" alt="Icon">
                             </div>
                             <div class="achiev__item-descr">
-                                <span class="achiev__item-val">15M</span>
+                                <span class="achiev__item-val">
+                                    <span class="achiev__item-val">15M</span>
+                                </span>
                                 <p class="achiev__item-text">
                                     Over 15 <span>million in revenue per year</span> for our customers
                                 </p>
@@ -393,7 +403,9 @@
                                 <img src="./assets/img/ico/ach_2.svg" alt="Icon">
                             </div>
                             <div class="achiev__item-descr">
-                                <span class="achiev__item-val">25M</span>
+                                <span class="achiev__item-val">
+                                    <span class="achiev__item-val">25M</span>
+                                </span>
                                 <p class="achiev__item-text">
                                     Over 15 <span>million in revenue per year</span> for our customers
                                 </p>
@@ -406,7 +418,9 @@
                                 <img src="./assets/img/ico/ach_3.svg" alt="Icon">
                             </div>
                             <div class="achiev__item-descr">
-                                <span class="achiev__item-val">240</span>
+                                <span class="achiev__item-val">
+                                    <span class="achiev__item-val">240</span>
+                                </span>
                                 <p class="achiev__item-text">
                                     With sales outsourcing: <span>240 new customers</span> per year
                                 </p>
@@ -433,7 +447,9 @@
                                 <img src="./assets/img/ico/ach_5.svg" alt="Icon">
                             </div>
                             <div class="achiev__item-descr">
-                                <span class="achiev__item-val">100+</span>
+                                <span class="achiev__item-val">
+                                    <span class="achiev__item-val">100+</span>
+                                </span>
                                 <p class="achiev__item-text">
                                     Have already been at multiple trade shows and
                                     <span>generate 100+ leads at trade shows</span>
@@ -447,7 +463,7 @@
                                 <img src="./assets/img/ico/ach_6.svg" alt="Icon">
                             </div>
                             <div class="achiev__item-descr">
-                                <span class="achiev__item-val">20,000€-250,00€</span>
+                                <span class="achiev__item-val">20,000€-25,000€</span>
                                 <p class="achiev__item-text">
                                     With appointment setting:
                                     <span>2 new customers from 10 appointments</span> who
@@ -462,10 +478,10 @@
         <section class="branches section-green">
             <div class="container">
                 <div class="section-head">
-                    <p class="section-head__subtitle">
+                    <p class="section-head__subtitle js-title-anim" data-title-animation>
                         Maecenas sodales neque
                     </p>
-                    <h2 class="section-head__title content-title">
+                    <h2 class="section-head__title content-title js-title-anim" data-title-animation>
                         Gute Vertriebler zu finden ist nicht leicht<span>.</span>
                     </h2>
                     <p class="section-head__text">
@@ -479,10 +495,10 @@
                             <div class="branches-box">
                                 <div class="branches-box__info">
                                     <img src="./assets/img/gallery-logo.png" alt="Logo" class="branches-box__logo">
-                                    <h3 class="branches-box__title">
+                                    <h3 class="branches-box__title js-title-anim" data-title-animation>
                                         Pellentesque habitant morbi tristique
                                     </h3>
-                                    <p class="branches-box__text">
+                                    <p class="branches-box__text js-bounce-anim">
                                         Donec pharetra commodo leo, in porttitor turpis posuere ac. Ut ultrices ultrices
                                         purus sed molestie. Cras aliquam eleifend consequat. Morbi et porta magna, eget
                                         bibendum arcu. Pellentesque habitant morbi tristique senectus et netus et
@@ -495,7 +511,7 @@
                                     <a href="javascript: void(0)" class="branches-box__link cta cta--lght">Jetzt Termin
                                         Buchen</a>
                                 </div>
-                                <div class="branches-box__preview">
+                                <div class="branches-box__preview js-move-animate">
                                     <img src="./assets/img/gallery.jpg" alt="Picture">
                                     <div class="branches-box__stats">
                                         <div class="branches-box__stat">
@@ -514,7 +530,7 @@
                             <div class="branches-box">
                                 <div class="branches-box__info">
                                     <img src="./assets/img/gallery-logo.png" alt="Logo" class="branches-box__logo">
-                                    <h3 class="branches-box__title">
+                                    <h3 class="branches-box__title js-title-anim" data-title-animation>
                                         Pellentesque habitant morbi tristique
                                     </h3>
                                     <p class="branches-box__text">
@@ -530,7 +546,7 @@
                                     <a href="javascript: void(0)" class="branches-box__link cta cta--lght">Jetzt Termin
                                         Buchen</a>
                                 </div>
-                                <div class="branches-box__preview">
+                                <div class="branches-box__preview js-move-animate">
                                     <img src="./assets/img/gallery.jpg" alt="Picture">
                                     <div class="branches-box__stats">
                                         <div class="branches-box__stat">
@@ -566,10 +582,10 @@
         <section class="works">
             <div class="container">
                 <div class="section-head">
-                    <p class="section-head__subtitle">
+                    <p class="section-head__subtitle js-title-anim" data-title-animation>
                         Maecenas sodales neque
                     </p>
-                    <h2 class="section-head__title content-title">
+                    <h2 class="section-head__title content-title js-title-anim" data-title-animation>
                         Gute Vertriebler zu finden ist nicht leicht<span>.</span>
                     </h2>
                     <p class="section-head__text">
@@ -580,7 +596,7 @@
                 <ul class="works__cards">
                     <li class="works__card">
                         <img src="./assets/img/works.jpg" alt="Picture" class="works__pic">
-                        <h3 class="works__title">
+                        <h3 class="works__title js-title-anim" data-title-animation>
                             Suspendisse laoreet nisi potitor
                         </h3>
                         <p class="works__text">
@@ -601,7 +617,7 @@
                     </li>
                     <li class="works__card">
                         <img src="./assets/img/works.jpg" alt="Picture" class="works__pic">
-                        <h3 class="works__title">
+                        <h3 class="works__title js-title-anim" data-title-animation>
                             Suspendisse laoreet nisi potitor
                         </h3>
                         <p class="works__text">
@@ -622,7 +638,7 @@
                     </li>
                     <li class="works__card">
                         <img src="./assets/img/works.jpg" alt="Picture" class="works__pic">
-                        <h3 class="works__title">
+                        <h3 class="works__title js-title-anim" data-title-animation>
                             Suspendisse laoreet nisi potitor
                         </h3>
                         <p class="works__text">
@@ -647,10 +663,10 @@
         <section class="video section-green">
             <div class="container">
                 <div class="section-head">
-                    <p class="section-head__subtitle">
+                    <p class="section-head__subtitle js-title-anim" data-title-animation>
                         Maecenas sodales neque
                     </p>
-                    <h2 class="section-head__title content-title">
+                    <h2 class="section-head__title content-title js-title-anim" data-title-animation>
                         Gute Vertriebler zu finden ist nicht leicht<span>.</span>
                     </h2>
                     <p class="section-head__text">
@@ -658,7 +674,7 @@
                         pretium quis.
                     </p>
                 </div>
-                <div class="video__box js-video-wrapper">
+                <div class="video__box js-video-wrapper js-move-animate">
                     <video class="js-video" playsinline="" poster="./assets/img/video.jpg">
                         <source src="./assets/video/video.mp4" type="video/mp4">
                         Your browser does not support the tag.
@@ -694,10 +710,10 @@
         <section class="history">
             <div class="container">
                 <div class="section-head">
-                    <p class="section-head__subtitle">
+                    <p class="section-head__subtitle js-title-anim" data-title-animation>
                         Maecenas sodales neque
                     </p>
-                    <h2 class="section-head__title content-title">
+                    <h2 class="section-head__title content-title js-title-anim" data-title-animation>
                         Gute Vertriebler zu finden ist nicht leicht<span>.</span>
                     </h2>
                     <p class="section-head__text">
@@ -706,7 +722,7 @@
                     </p>
                 </div>
                 <div class="history__team">
-                    <div class="history__preview">
+                    <div class="history__preview js-move-animate">
                         <img src="./assets/img/history.jpg" alt="Picture">
                         <div class="history__label">
                             <p>Onpoint<span>.</span></p>
@@ -717,7 +733,8 @@
                         <div class="history__logo">
                             <img src="./assets/img/ico/logo_dkr.png" alt="Logo">
                         </div>
-                        <h2 class="history__title">Suspendisse tempor lacinia porta</h2>
+                        <h2 class="history__title js-title-anim" data-title-animation>Suspendisse tempor lacinia porta
+                        </h2>
                         <p class="history__text">
                             Suspendisse facilisis neque iaculis turpis dapibus gravida sit amet eget sapien. Nam egestas
                             bibendum justo quis scelerisque. Curabitur nibh sapien, tincidunt ut ligula quis,
@@ -736,29 +753,29 @@
                         </a>
                     </div>
                 </div>
-                <div class="history__employees">
-                    <div class="history__employee">
+                <ul class="history__employees">
+                    <li class="history__employee">
                         <img src="./assets/img/empl_1.jpg" alt="Picture">
                         <div class="history__label">
                             <p>John Doe</p>
                             <p>CEO and Co-founder of Onpoint</p>
                         </div>
-                    </div>
-                    <div class="history__employee">
+                    </li>
+                    <li class="history__employee">
                         <img src="./assets/img/empl_2.jpg" alt="Picture">
                         <div class="history__label">
                             <p>Anna Fox</p>
                             <p>CTO and Co-founder of Onpoint</p>
                         </div>
-                    </div>
-                    <div class="history__employee">
+                    </li>
+                    <li class="history__employee">
                         <img src="./assets/img/empl_3.jpg" alt="Picture">
                         <div class="history__label">
                             <p>Richard Lowrence</p>
                             <p>Art director of Onpoint</p>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
                 <a href="javascript: void(0)" class="history__cta cta cta--olive">
                     Jetzt Termin Buchen
                 </a>
@@ -767,10 +784,10 @@
         <section class="carousel">
             <div class="container">
                 <div class="section-head">
-                    <p class="section-head__subtitle">
+                    <p class="section-head__subtitle js-title-anim" data-title-animation>
                         Maecenas sodales neque
                     </p>
-                    <h2 class="section-head__title content-title">
+                    <h2 class="section-head__title content-title js-title-anim" data-title-animation>
                         Gute Vertriebler zu finden ist nicht leicht<span>.</span>
                     </h2>
                     <p class="section-head__text">
@@ -787,8 +804,8 @@
                                         <img src="./assets/img/carousel.jpg" alt="Picture">
                                     </div>
                                     <div class="carousel-box__descr">
-                                        <p>SALES<span>.</span></p>
-                                        <p>ON POINT<span>.</span></p>
+                                        <p class="js-title-anim" data-title-animation>SALES<span>.</span></p>
+                                        <p class="js-title-anim" data-title-animation>ON POINT<span>.</span></p>
                                     </div>
                                 </div>
                                 <div class="carousel-box__info">
@@ -809,7 +826,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    <h3 class="carousel-box__title">
+                                    <h3 class="carousel-box__title js-title-anim" data-title-animation>
                                         Curabitur nibh sapien tincidunt ut ligula quis accumsan
                                     </h3>
                                     <p class="carousel-box__text">
@@ -828,8 +845,8 @@
                                         <img src="./assets/img/carousel.jpg" alt="Picture">
                                     </div>
                                     <div class="carousel-box__descr">
-                                        <p>SALES<span>.</span></p>
-                                        <p>ON POINT<span>.</span></p>
+                                        <p class="js-title-anim" data-title-animation>SALES<span>.</span></p>
+                                        <p class="js-title-anim" data-title-animation>ON POINT<span>.</span></p>
                                     </div>
                                 </div>
                                 <div class="carousel-box__info">
@@ -850,7 +867,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    <h3 class="carousel-box__title">
+                                    <h3 class="carousel-box__title js-title-anim" data-title-animation>
                                         Curabitur nibh sapien tincidunt ut ligula quis accumsan
                                     </h3>
                                     <p class="carousel-box__text">
@@ -869,8 +886,8 @@
                                         <img src="./assets/img/carousel.jpg" alt="Picture">
                                     </div>
                                     <div class="carousel-box__descr">
-                                        <p>SALES<span>.</span></p>
-                                        <p>ON POINT<span>.</span></p>
+                                        <p class="js-title-anim" data-title-animation>SALES<span>.</span></p>
+                                        <p class="js-title-anim" data-title-animation>ON POINT<span>.</span></p>
                                     </div>
                                 </div>
                                 <div class="carousel-box__info">
@@ -891,7 +908,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    <h3 class="carousel-box__title">
+                                    <h3 class="carousel-box__title js-title-anim" data-title-animation>
                                         Curabitur nibh sapien tincidunt ut ligula quis accumsan
                                     </h3>
                                     <p class="carousel-box__text">
@@ -910,8 +927,8 @@
                                         <img src="./assets/img/carousel.jpg" alt="Picture">
                                     </div>
                                     <div class="carousel-box__descr">
-                                        <p>SALES<span>.</span></p>
-                                        <p>ON POINT<span>.</span></p>
+                                        <p class="js-title-anim" data-title-animation>SALES<span>.</span></p>
+                                        <p class="js-title-anim" data-title-animation>ON POINT<span>.</span></p>
                                     </div>
                                 </div>
                                 <div class="carousel-box__info">
@@ -966,7 +983,7 @@
             <div class="container">
                 <div class="owners__content">
                     <div class="owners__descr">
-                        <h2 class="owners__title content-title">
+                        <h2 class="owners__title content-title js-title-anim" data-title-animation>
                             Donec in tincidunt mattis lacus
                         </h2>
                         <p class="owners__text">
@@ -1011,10 +1028,10 @@
         <section class="faq">
             <div class="container">
                 <div class="section-head">
-                    <p class="section-head__subtitle">
+                    <p class="section-head__subtitle js-title-anim" data-title-animation>
                         Maecenas sodales neque
                     </p>
-                    <h2 class="section-head__title content-title">
+                    <h2 class="section-head__title content-title js-title-anim" data-title-animation>
                         Gute Vertrieb<br>ler nicht leicht<span>.</span>
                     </h2>
                     <p class="section-head__text">
@@ -1228,6 +1245,14 @@
             </div>
         </div>
     </footer>
+
+    <script src="./assets/libs/odometer/odometer.min.js"></script>
+    <script src="./assets/libs/gsap/gsap.min.js"></script>
+    <script src="./assets/libs/gsap/ScrollTrigger.min.js"></script>
+    <script src="./assets/libs/gsap/SplitText.min.js"></script>
+    <script src="./assets/libs/lenis/lenis.min.js"></script>
+    <script src="./assets/libs/swiper/swiper.min.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
 </body>
 
 </html>

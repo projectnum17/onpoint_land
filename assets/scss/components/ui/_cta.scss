@@ -9,7 +9,7 @@
     flex-shrink: 0;
     @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
     @include hover {
-        opacity: 0.8;
+        opacity: 0.8 !important;
     }
 
     &--drk {

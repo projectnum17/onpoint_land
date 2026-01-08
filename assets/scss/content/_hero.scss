@@ -83,10 +83,20 @@
         gap: rem(4);
 
         &-num {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
             font: 400 #{rem(58)} / 100% var(--ff-accent);
 
             span {
-                color: var(--accent-green);
+                // color: var(--accent-green);
+                &.odometer-formatting-mark {
+                    color: var(--accent-green);
+                }
+
+                &.dot {
+                    color: var(--accent-green);
+                }
             }
         }
 

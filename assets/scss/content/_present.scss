@@ -2,6 +2,7 @@
 @use '../base/mixins' as *;
 
 .present {
+    overflow: hidden;
     clip-path: ellipse(120% 100% at 50% 100%);
     display: grid;
     min-height: 100vh;
