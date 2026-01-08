@@ -7,28 +7,68 @@
     border-radius: rem(40);
     display: inline-flex;
     flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
     @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
     @include hover {
-        opacity: 0.8 !important;
+        opacity: 0.95 !important;
+        color: var(--color-white);
+
+        span {
+            width: 225%;
+            height: 300px;
+        }
+    }
+
+    span {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        transition: width 0.4s cubic-bezier(0.768, 0.304, 0.496, 0.884),
+            height 0.4s cubic-bezier(0.768, 0.304, 0.496, 0.884);
+        transform: translate(-50%, -50%);
+        z-index: -1;
     }
 
     &--drk {
         background: var(--drk-green);
         color: var(--color-white);
+        @include hover {
+            color: var(--color-dark);
+        }
+        span {
+            background: var(--accent-green);
+        }
     }
 
     &--accent {
         background: var(--accent-green);
         color: var(--drk-green);
+
+        span {
+            background: var(--color-olive);
+        }
     }
 
     &--lght {
         background: var(--lght-green);
         color: var(--drk-green);
+
+        @include hover {
+            color: var(--drk-green);
+        }
+        span {
+            background: var(--color-white);
+        }
     }
 
     &--olive {
         background: var(--color-olive);
         color: var(--color-white);
+        span {
+            background: var(--drk-green);
+        }
     }
 }

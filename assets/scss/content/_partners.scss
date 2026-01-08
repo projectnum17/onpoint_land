@@ -3,6 +3,11 @@
 
 .partners {
     margin-bottom: var(--section-mb);
+    overflow: hidden;
+
+    .container {
+        padding: 0;
+    }
 
     &__list {
         align-items: center;
@@ -10,14 +15,26 @@
         align-items: center;
         justify-content: space-between;
         gap: rem(20);
+
+        overflow: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        padding-inline: var(--container-padding);
     }
 
     &__item {
         height: 100%;
         width: 100%;
-        max-width: 150px;
+        max-width: rem(150);
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-shrink: 0;
+        @include media('mobile') {
+            max-width: rem(100);
+        }
     }
 }

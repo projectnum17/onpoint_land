@@ -5,14 +5,28 @@
     padding-block: var(--section-mb);
     clip-path: ellipse(150% 100% at 50% 100%);
     margin-bottom: var(--section-mb);
+    @include media('mobile') {
+        clip-path: ellipse(250% 100% at 50% 100%);
+    }
 
     &__box {
-        cursor: pointer;
         border-radius: rem(40);
         overflow: hidden;
         max-width: rem(1036);
         margin: 0 auto #{rem(96)};
         position: relative;
+
+        @include media('tablet') {
+            margin: 0 auto #{rem(48)};
+            height: rem(350);
+        }
+
+        @include media('mobile') {
+            margin: 0 auto #{rem(32)};
+            border-radius: rem(12);
+            height: auto;
+            aspect-ratio: 16 / 9;
+        }
 
         video {
             width: 100%;
@@ -38,9 +52,18 @@
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
+        @include media('mobile') {
+            width: rem(48);
+            height: rem(48);
+        }
+
         img {
             width: rem(40);
             height: rem(40);
+            @include media('mobile') {
+                width: rem(24);
+                height: rem(24);
+            }
         }
 
         &.is-hide {
@@ -54,5 +77,9 @@
         display: flex;
         width: max-content;
         margin: 0 auto #{rem(48)};
+
+        @include media('tablet') {
+            margin: 0 auto #{rem(32)};
+        }
     }
 }

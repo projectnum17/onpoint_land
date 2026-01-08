@@ -9,14 +9,30 @@
     gap: rem(16);
     text-align: center;
 
+    @include media('tablet') {
+        margin: 0 auto #{rem(48)};
+    }
+
+    @include media('mobile') {
+        margin: 0 auto #{rem(32)};
+        gap: rem(12);
+    }
+
     &__subtitle {
         font: 900 #{rem(12)} / 150% var(--ff-base);
         text-transform: uppercase;
         letter-spacing: 1px;
+        @include media('mobile') {
+            gap: rem(8);
+        }
     }
 
     &__text {
         font: 400 #{rem(14)} / 150% var(--ff-base);
         color: var(--color-dark_half);
+
+        @include media('mobile') {
+            font-size: rem(12);
+        }
     }
 }

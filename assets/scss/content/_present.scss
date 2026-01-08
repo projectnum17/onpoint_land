@@ -1,6 +1,24 @@
 @use '../base/media' as *;
 @use '../base/mixins' as *;
 
+@property --grad-stop {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 37.02%;
+}
+
+@keyframes pulseGradient {
+    0% {
+        --grad-stop: 37.02%;
+    }
+    50% {
+        --grad-stop: 10%;
+    }
+    100% {
+        --grad-stop: 37.02%;
+    }
+}
+
 .present {
     overflow: hidden;
     clip-path: ellipse(120% 100% at 50% 100%);
@@ -10,18 +28,35 @@
     position: relative;
     margin-bottom: var(--section-mb);
 
-    &::after {
+    @include media('mobile') {
+        clip-path: ellipse(250% 100% at 50% 100%);
+    }
+
+    &::before {
+        pointer-events: none;
         content: '';
         position: absolute;
-        pointer-events: none;
         inset: 0;
         width: 100%;
         height: 100%;
+        z-index: 2;
         background: linear-gradient(
             180deg,
-            rgba(0, 50, 50, 0) 60.58%,
-            #003232 89.9%
+            rgba(0, 50, 50, 0) var(--grad-stop),
+            #003232 84.62%
         );
+
+        @include media('tablet') {
+            background: linear-gradient(
+                180deg,
+                rgba(0, 50, 50, 0) -50%,
+                #003232 84.62%
+            );
+        }
+
+        @media (min-width: 992px) {
+            animation: pulseGradient 5s infinite ease-in-out;
+        }
     }
 
     &__bg {
@@ -42,11 +77,19 @@
     }
 
     &__content {
+        flex-wrap: wrap;
         padding-bottom: rem(57);
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
         gap: rem(24);
+        @include media('mobile') {
+            gap: rem(12);
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-bottom: rem(36);
+        }
     }
 
     &__info {
@@ -55,6 +98,10 @@
         display: flex;
         flex-direction: column;
         gap: rem(16);
+
+        @include media('mobile') {
+            gap: rem(8);
+        }
     }
 
     &__subtitle {
@@ -62,12 +109,23 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         color: var(--accent-green);
+        @include media('mobile') {
+            font-size: rem(10);
+        }
     }
 
     &__title {
         font: 800 #{rem(72)} / 100% var(--ff-accent);
         text-transform: capitalize;
         color: var(--color-white);
+
+        @include media('tablet') {
+            font-size: rem(56);
+        }
+
+        @include media('mobile') {
+            font-size: rem(32);
+        }
     }
 
     &__descr {
@@ -76,11 +134,20 @@
         display: flex;
         flex-direction: column;
         gap: rem(24);
+
+        @include media('mobile') {
+            max-width: 100%;
+            align-items: center;
+        }
     }
 
     &__text {
         font: 400 #{rem(14)} / 150% var(--ff-base);
         color: #f0f5f0cc;
+
+        @include media('mobile') {
+            font-size: rem(12);
+        }
     }
 
     &__link {

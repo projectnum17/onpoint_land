@@ -8,6 +8,13 @@
     justify-content: flex-end;
     gap: rem(8);
 
+    @include media('tablet') {
+        padding-top: rem(48);
+    }
+    @include media('mobile') {
+        padding-top: rem(32);
+    }
+
     &:has(.swiper-button-lock) {
         display: none;
     }

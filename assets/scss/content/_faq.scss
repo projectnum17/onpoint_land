@@ -6,7 +6,11 @@
     .container {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
         gap: rem(24);
+        @include media('mobile') {
+            flex-direction: column;
+        }
     }
 
     .section-head {
@@ -15,12 +19,21 @@
         margin: 0;
         text-align: left;
         align-items: flex-start;
+        position: sticky;
+        top: rem(90);
+        @include media('tablet') {
+            padding: 0;
+        }
+        @include media('mobile') {
+            position: static;
+            top: auto;
+            max-width: 100%;
+            width: 100%;
+            text-align: center;
 
-        &__title {
-            // hyphens: auto;
-            // overflow-wrap: break-word;
-            // word-break: normal;
-            // white-space: normal;
+            & > * {
+                width: 100%;
+            }
         }
     }
 
@@ -28,10 +41,17 @@
         display: flex;
         align-items: center;
         counter-increment: faqCounter;
+        gap: rem(12);
 
         &::before {
             font: 400 #{rem(24)} / 150% var(--ff-base);
             content: counter(faqCounter, decimal-leading-zero);
+            @include media('tablet') {
+                font-size: rem(20);
+            }
+            @include media('mobile') {
+                font-size: rem(18);
+            }
         }
     }
 
@@ -52,6 +72,13 @@
     &__item {
         cursor: pointer;
         padding-bottom: rem(48);
+
+        @include media('tablet') {
+            padding-bottom: rem(24);
+        }
+        @include media('mobile') {
+            padding-bottom: rem(12);
+        }
 
         &:not(:last-child) {
             border-bottom: 1px solid #1a1a1a26;
@@ -79,6 +106,12 @@
 
     &__title {
         font: 400 #{rem(24)} / 150% var(--ff-base);
+        @include media('tablet') {
+            font-size: rem(20);
+        }
+        @include media('mobile') {
+            font-size: rem(18);
+        }
     }
 
     &__text {
@@ -86,6 +119,9 @@
         overflow: hidden;
         color: var(--color-dark_half);
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            font-size: rem(12);
+        }
     }
 
     &__inner {
@@ -101,6 +137,11 @@
         cursor: pointer;
         flex-shrink: 0;
         display: inline-flex;
+
+        @include media('mobile') {
+            width: rem(10);
+            height: rem(10);
+        }
 
         &:before,
         &:after {
@@ -134,5 +175,13 @@
         width: rem(56);
         height: rem(56);
         background: var(--color-olive);
+        @include media('tablet') {
+            width: rem(42);
+            height: rem(42);
+        }
+        @include media('mobile') {
+            width: rem(24);
+            height: rem(24);
+        }
     }
 }

@@ -3,4 +3,119 @@
 
 .circles {
     margin-bottom: var(--section-mb);
+
+    &__box {
+        max-width: rem(850);
+        margin: 0 auto;
+        position: relative;
+        min-height: rem(650);
+
+        @include media('tablet') {
+            max-width: rem(500);
+            min-height: rem(400);
+        }
+
+        @include media('mobile') {
+            max-width: rem(340);
+            min-height: rem(300);
+        }
+    }
+
+    &__item {
+        width: rem(118);
+        height: rem(118);
+        border-radius: 50%;
+        box-shadow: 0px 2px 6px 0px #1a1a1a14;
+        background: #dcdcdc;
+        position: absolute;
+
+        @include media('tablet') {
+            width: rem(60);
+            height: rem(60);
+        }
+
+        &.item--accent {
+            background: #4ed686;
+        }
+
+        &.frst-el {
+            left: 0;
+            top: 45%;
+        }
+
+        &.scnd-el {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &.thrd-el {
+            top: 0;
+            right: 20%;
+        }
+        &.frth-el {
+            bottom: 0;
+            right: 25%;
+
+            @include media('mobile') {
+                right: 23%;
+            }
+        }
+    }
+
+    &__line {
+        height: 1px;
+        position: absolute;
+        width: rem(152);
+        background-color: #1a1a1a1a;
+        box-shadow: 0px 2px 6px 0px #1a1a1a14;
+
+        @include media('tablet') {
+            width: rem(80);
+        }
+
+        @include media('mobile') {
+            width: rem(55);
+        }
+
+        &.frst-el {
+            transform: rotate(176deg);
+            top: 340px;
+            left: 160px;
+            @include media('tablet') {
+                top: rem(205);
+                left: rem(100);
+            }
+            @include media('mobile') {
+                top: rem(160);
+                left: rem(72);
+            }
+        }
+        &.scnd-el {
+            top: 190px;
+            right: 250px;
+            transform: rotate(125deg);
+            @include media('tablet') {
+                top: rem(112);
+                right: rem(150);
+            }
+            @include media('mobile') {
+                right: rem(108);
+                top: rem(92);
+            }
+        }
+        &.thrd-el {
+            bottom: 193px;
+            right: 270px;
+            transform: rotate(60deg);
+            @include media('tablet') {
+                right: rem(159);
+                bottom: rem(113);
+            }
+            @include media('mobile') {
+                bottom: rem(89);
+                right: rem(112);
+            }
+        }
+    }
 }

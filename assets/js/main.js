@@ -1,11 +1,13 @@
 'use strict';
 
 import headerScroll from './modules/headerScroll.js';
+import mobileMenuHandler from './modules/mobileMenuHandler.js';
 import counterAnimation from './modules/counterAnimation.js';
 import faqHandler from './modules/faqHandler.js';
 import carouselHandler from './modules/carouselHandler.js';
 import branchesHandler from './modules/branchesHandler.js';
 import videoHandler from './modules/videoHandler.js';
+import ctaHover from './modules/ctaHover.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const animationsHandler = () => {
@@ -13,13 +15,28 @@ document.addEventListener('DOMContentLoaded', () => {
             const bounceElements = document.querySelectorAll('.js-bounce-anim');
             if (!bounceElements.length) return;
 
-            bounceElements.forEach((be) => {
-                gsap.from(be, {
-                    autoAlpha: 0,
-                    yPercent: 200,
-                    delay: 0.3,
-                    duration: 1,
-                    ease: 'back.out(1)',
+            let mm = gsap.matchMedia();
+            mm.add('(min-width: 992px', () => {
+                bounceElements.forEach((be) => {
+                    gsap.from(be, {
+                        autoAlpha: 0,
+                        yPercent: 200,
+                        delay: 0.3,
+                        duration: 1,
+                        ease: 'back.out(1)',
+                    });
+                });
+            });
+
+            mm.add('(max-width: 991px', () => {
+                bounceElements.forEach((be) => {
+                    gsap.from(be, {
+                        autoAlpha: 0,
+                        yPercent: 10,
+                        delay: 0.3,
+                        duration: 1,
+                        ease: 'back.out(1)',
+                    });
                 });
             });
         };
@@ -28,22 +45,25 @@ document.addEventListener('DOMContentLoaded', () => {
             const moveElements = document.querySelectorAll('.js-move-animate');
             if (!moveElements.length) return;
 
-            moveElements.forEach((me) => {
-                gsap.set(me, {
-                    yPercent: -2,
-                    force3D: true,
-                    willChange: 'transform',
-                });
+            let mm = gsap.matchMedia();
+            mm.add('(min-width: 992px', () => {
+                moveElements.forEach((me) => {
+                    gsap.set(me, {
+                        yPercent: -2,
+                        force3D: true,
+                        willChange: 'transform',
+                    });
 
-                gsap.to(me, {
-                    yPercent: 7,
-                    ease: 'none',
-                    scrollTrigger: {
-                        trigger: me,
-                        scrub: true,
-                        fastScrollEnd: true,
-                        preventOverlaps: true,
-                    },
+                    gsap.to(me, {
+                        yPercent: 5,
+                        ease: 'none',
+                        scrollTrigger: {
+                            trigger: me,
+                            scrub: true,
+                            fastScrollEnd: true,
+                            preventOverlaps: true,
+                        },
+                    });
                 });
             });
         };
@@ -55,6 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const splits = Array.from(titlesElements).map((title) => {
                 const s = new SplitText(title, { type: 'words, chars' });
                 gsap.set(s.chars, {
+                    opacity: 0,
+                    y: 20,
                     willChange: 'transform, opacity',
                     force3D: true,
                 });
@@ -66,18 +88,60 @@ document.addEventListener('DOMContentLoaded', () => {
                     batch.forEach((title) => {
                         const target = splits.find((s) => s.el === title);
                         if (target) {
-                            gsap.from(target.split.chars, {
-                                opacity: 0,
-                                y: 20,
-                                duration: 0.4,
+                            gsap.to(target.split.chars, {
+                                opacity: 1,
+                                y: 0,
+                                duration: 0.6,
                                 ease: 'power3.out',
                                 stagger: 0.02,
-                                overwrite: 'auto',
+                                delay: 0.2,
+                                overwrite: true,
                             });
                         }
                     });
                 },
+                start: 'top 95%',
                 once: true,
+            });
+        };
+
+        const animationScrollingElements = (
+            selector = '.js-scroll',
+            options = {}
+        ) => {
+            const scrollingEls = document.querySelectorAll(selector);
+            if (!scrollingEls.length) return;
+
+            const defaults = {
+                opacity: 0,
+                y: 50,
+                x: 0,
+                scale: 1,
+                duration: 0.8,
+                ease: 'power3.out',
+                stagger: 0.1,
+                start: 'top 95%',
+                end: 'bottom 80%',
+            };
+
+            const settings = { ...defaults, ...options };
+
+            scrollingEls.forEach((el) => {
+                gsap.from(el, {
+                    opacity: settings.opacity,
+                    y: settings.y,
+                    x: settings.x,
+                    scale: settings.scale,
+                    duration: settings.duration,
+                    ease: settings.ease,
+                    stagger: settings.stagger,
+                    scrollTrigger: {
+                        trigger: el,
+                        start: settings.start,
+                        end: settings.end,
+                        toggleActions: 'play none none reverse',
+                    },
+                });
             });
         };
 
@@ -89,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
         animateTitlesElements();
         animateMoveElements();
         animateBounceElements();
+        animationScrollingElements();
 
         window.addEventListener('load', () => {
             ScrollTrigger.refresh();
@@ -97,9 +162,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     animationsHandler();
     counterAnimation();
+    mobileMenuHandler();
     headerScroll();
     faqHandler();
     carouselHandler();
     branchesHandler();
     videoHandler();
+    ctaHover();
 });

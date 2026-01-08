@@ -10,6 +10,16 @@
         border-radius: rem(40);
         background: var(--drk-green);
         color: var(--lght-green);
+
+        @include media('tablet') {
+            padding-block: rem(72);
+            border-radius: rem(24);
+        }
+
+        @include media('mobile') {
+            padding-block: rem(56);
+            border-radius: rem(12);
+        }
     }
 
     &__descr {
@@ -38,6 +48,9 @@
         max-width: rem(370);
         transform: translateY(20%);
         pointer-events: none;
+        @include media('tablet') {
+            display: none;
+        }
 
         &.man-lft {
             left: 0;

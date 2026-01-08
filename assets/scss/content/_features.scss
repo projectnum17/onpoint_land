@@ -9,10 +9,24 @@
         align-items: flex-end;
         justify-content: center;
         margin-bottom: rem(96);
+        @include media('tablet') {
+            margin-bottom: rem(48);
+        }
+        @include media('mobile') {
+            margin-bottom: rem(32);
+            flex-direction: column-reverse;
+            gap: rem(20);
+        }
     }
 
     &__logo {
         max-width: rem(231);
+        @include media('tablet') {
+            max-width: rem(150);
+        }
+        @include media('mobile') {
+            margin: 0 auto;
+        }
     }
 
     &__card {
@@ -20,8 +34,20 @@
         flex-direction: column;
         gap: rem(24);
 
+        @include media('tablet') {
+            width: 50%;
+            gap: rem(20);
+        }
+        @include media('mobile') {
+            gap: rem(8);
+            width: 100%;
+        }
+
         &:first-child {
             max-width: rem(514);
+            @include media('tablet') {
+                max-width: 100%;
+            }
 
             .features__card-list,
             .features__card-head {
@@ -37,6 +63,13 @@
         &:last-child {
             transform: translateX(#{rem(-8)});
             max-width: rem(530);
+
+            @include media('tablet') {
+                max-width: 100%;
+            }
+            @include media('mobile') {
+                transform: translate(0);
+            }
 
             .features__card-list,
             .features__card-head {
@@ -58,20 +91,39 @@
             flex-direction: column;
             gap: rem(16);
 
+            @include media('tablet') {
+                padding: rem(24) rem(20);
+            }
+            @include media('mobile') {
+                padding: rem(12);
+                border-radius: rem(12);
+                gap: rem(10);
+            }
+
             li {
                 display: flex;
                 flex-direction: column;
                 gap: rem(8);
                 padding-bottom: rem(16);
+                @include media('mobile') {
+                    padding-bottom: rem(10);
+                }
             }
 
             h3 {
                 font: 700 #{rem(18)} / 150% var(--ff-base);
                 margin: 0 0 rem(8) 0;
+                @include media('mobile') {
+                    font-size: rem(16);
+                    margin: 0 0 rem(4) 0;
+                }
             }
 
             p {
                 font: 400 #{rem(14)} / 150% var(--ff-base);
+                @include media('mobile') {
+                    font-size: rem(12);
+                }
             }
         }
 
@@ -82,6 +134,10 @@
             gap: rem(8);
             border-radius: rem(10);
             max-width: max-content;
+
+            @include media('mobile') {
+                margin: 0 auto;
+            }
 
             img {
                 width: rem(24);

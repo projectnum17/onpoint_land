@@ -9,8 +9,12 @@
     margin-bottom: var(--section-mb);
     background: var(--bg-body);
 
-    .section-head {
-        margin-bottom: rem(96);
+    @include media('tablet') {
+        padding-top: rem(100);
+    }
+    @include media('mobile') {
+        clip-path: ellipse(350% 100% at 50% 100%);
+        padding-top: rem(56);
     }
 
     &__content {
@@ -18,22 +22,40 @@
         align-items: center;
         gap: rem(24);
         justify-content: space-between;
+        @include media('mobile') {
+            flex-direction: column;
+        }
     }
 
     &__list {
         display: flex;
         flex-direction: column;
         gap: rem(56);
+        @include media('tablet') {
+            gap: rem(44);
+        }
+
+        @include media('mobile') {
+            gap: rem(32);
+        }
 
         li {
             padding-inline: rem(16);
             display: flex;
             flex-direction: column;
+            @include media('mobile') {
+                padding: 0;
+            }
 
             img {
                 width: rem(40);
                 height: rem(40);
                 margin-bottom: rem(16);
+                @include media('mobile') {
+                    width: rem(24);
+                    height: rem(24);
+                    margin-bottom: rem(12);
+                }
             }
         }
 
@@ -41,6 +63,11 @@
             li {
                 align-items: flex-end;
                 text-align: right;
+
+                @include media('mobile') {
+                    align-items: center;
+                    text-align: center;
+                }
             }
         }
 
@@ -48,6 +75,10 @@
             li {
                 align-items: flex-start;
                 text-align: left;
+                @include media('mobile') {
+                    align-items: center;
+                    text-align: center;
+                }
             }
         }
     }
@@ -56,11 +87,21 @@
         font: 800 #{rem(24)} / 120% var(--ff-accent);
         text-transform: capitalize;
         margin-bottom: rem(8);
+
+        @include media('tablet') {
+            font-size: rem(22);
+        }
+        @include media('mobile') {
+            font-size: rem(18);
+        }
     }
 
     &__text {
         font: 400 #{rem(14)} / 150% var(--ff-base);
         color: var(--color-dark_half);
+        @include media('mobile') {
+            font-size: rem(12);
+        }
     }
 
     &__preview {
@@ -69,9 +110,19 @@
         overflow: hidden;
         height: rem(780);
 
+        @include media('mobile') {
+            max-width: 100%;
+            width: 100%;
+            border-radius: rem(12);
+            height: rem(270);
+        }
+
         img {
             height: 100%;
             object-fit: cover;
+            @include media('mobile') {
+                width: 100%;
+            }
         }
     }
 }

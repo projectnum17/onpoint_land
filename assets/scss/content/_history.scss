@@ -10,6 +10,15 @@
         justify-content: space-between;
         gap: rem(24);
         margin-bottom: rem(48);
+
+        @include media('tablet') {
+            flex-direction: column;
+        }
+
+        @include media('mobile') {
+            gap: rem(16);
+            margin-bottom: rem(32);
+        }
     }
 
     &__preview {
@@ -18,15 +27,46 @@
         width: 100%;
         overflow: hidden;
         border-radius: rem(40);
+
+        @include media('tablet') {
+            max-width: 70%;
+            margin: 0 auto;
+            border-radius: rem(24);
+            max-height: 370px;
+            aspect-ratio: 16 / 9;
+        }
+
+        @include media('mobile') {
+            max-width: 100%;
+            border-radius: rem(12);
+            min-height: rem(270);
+        }
+
+        img {
+            @include media('mobile') {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
     }
 
     &__logo {
         width: rem(118);
+        @include media('mobile') {
+            width: rem(91);
+        }
     }
 
     &__title {
         font: 800 #{rem(40)} / 120% var(--ff-accent);
         margin-bottom: rem(8);
+        @include media('tablet') {
+            font-size: rem(34);
+        }
+        @include media('mobile') {
+            font-size: rem(24);
+        }
     }
 
     &__text {
@@ -35,15 +75,24 @@
 
         &:not(:last-of-type) {
             margin-bottom: rem(24);
+            @include media('mobile') {
+                margin-bottom: rem(12);
+            }
         }
     }
 
     &__link {
         margin-top: rem(40);
+        @include media('mobile') {
+            margin-top: rem(24);
+        }
     }
 
     &__description {
         max-width: rem(506);
+        @include media('tablet') {
+            max-width: 100%;
+        }
     }
 
     &__employees {
@@ -51,16 +100,44 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: rem(24);
         margin-bottom: rem(96);
+
+        @include media('tablet') {
+            display: flex;
+            margin-bottom: rem(48);
+            justify-content: center;
+        }
+        @include media('mobile') {
+            margin-bottom: rem(32);
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
     }
 
     &__employee {
         border-radius: rem(40);
         overflow: hidden;
         position: relative;
+        @include media('tablet') {
+            max-width: 100%;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            max-height: 350px;
+            border-radius: rem(24);
+        }
+        @include media('mobile') {
+            max-width: rem(480);
+            max-height: inherit;
+            aspect-ratio: 1;
+            margin: 0 auto;
+            border-radius: rem(12);
+        }
 
         img {
             height: 100%;
             object-fit: cover;
+            @include media('tablet') {
+                width: 100%;
+            }
         }
     }
 
@@ -79,6 +156,17 @@
         backdrop-filter: blur(15px) saturate(180%) contrast(100%);
         -webkit-backdrop-filter: blur(20px) saturate(180%) contrast(100%);
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+        @include media('tablet') {
+            border-radius: rem(12);
+            left: rem(12);
+            right: rem(12);
+            bottom: rem(12);
+        }
+
+        @include media('mobile') {
+            padding: rem(16) rem(12);
+        }
 
         p {
             margin: 0;

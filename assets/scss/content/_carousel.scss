@@ -24,6 +24,15 @@
             height: rem(673);
             border-radius: rem(40);
 
+            @include media('tablet') {
+                height: rem(370);
+                border-radius: rem(24);
+            }
+            @include media('mobile') {
+                height: auto;
+                border-radius: rem(12);
+            }
+
             &::after {
                 content: '';
                 position: absolute;
@@ -58,12 +67,28 @@
             z-index: 2;
             color: var(--color-white);
 
+            @include media('tablet') {
+                padding: rem(24);
+            }
+
+            @include media('mobile') {
+                padding: rem(18);
+            }
+
             p {
                 font: 800 #{rem(64)} / 120% var(--ff-accent);
                 text-transform: capitalize;
                 margin: 0;
                 span {
                     color: var(--accent-green);
+                }
+
+                @include media('tablet') {
+                    font-size: rem(56);
+                }
+
+                @include media('mobile') {
+                    font-size: rem(32);
                 }
             }
         }
@@ -109,6 +134,14 @@
         &__title {
             font: 800 #{rem(40)} / 120% var(--ff-accent);
             margin-bottom: rem(16);
+
+            @include media('tablet') {
+                font-size: rem(32);
+            }
+
+            @include media('mobile') {
+                font-size: rem(24);
+            }
         }
 
         &__text {
