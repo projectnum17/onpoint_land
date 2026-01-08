@@ -1,5 +1,16 @@
 'use strict';
 
+const loader = document.querySelector('.loader');
+let loaderHidden = false;
+
+const hideLoader = () => {
+    if (loader && !loaderHidden) {
+        loaderHidden = true;
+        loader.classList.add('is-hide');
+        setTimeout(() => loader.remove(), 500);
+    }
+};
+
 import headerScroll from './modules/headerScroll.js';
 import mobileMenuHandler from './modules/mobileMenuHandler.js';
 import counterAnimation from './modules/counterAnimation.js';
@@ -170,13 +181,6 @@ document.addEventListener('DOMContentLoaded', () => {
     videoHandler();
     ctaHover();
 
-    const loader = document.querySelector('.loader');
-    window.addEventListener('load', () => {
-        if (loader) {
-            loader.classList.add('is-hide');
-            setTimeout(() => {
-                loader.remove();
-            }, 500);
-        }
-    });
+    window.addEventListener('load', hideLoader);
+    setTimeout(hideLoader, 7000);
 });

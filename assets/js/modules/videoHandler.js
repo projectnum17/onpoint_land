@@ -5,19 +5,27 @@ const videoHandler = () => {
 
     if (!videoItem || !videoPlay || !videoWrapper) return;
 
+    let isLoaded = false;
+
+    const loadVideo = () => {
+        const source = videoItem.querySelector('source');
+        if (source && source.dataset.src) {
+            source.src = source.dataset.src;
+            videoItem.load();
+            isLoaded = true;
+        }
+    };
+
     const exitFullscreen = () => {
-        if (
+        const fullscreenDoc =
             document.fullscreenElement ||
             document.webkitFullscreenElement ||
-            document.msFullscreenElement
-        ) {
-            if (document.exitFullscreen) {
-                document.exitFullscreen();
-            } else if (document.webkitExitFullscreen) {
+            document.msFullscreenElement;
+        if (fullscreenDoc) {
+            if (document.exitFullscreen) document.exitFullscreen();
+            else if (document.webkitExitFullscreen)
                 document.webkitExitFullscreen();
-            } else if (document.msExitFullscreen) {
-                document.msExitFullscreen();
-            }
+            else if (document.msExitFullscreen) document.msExitFullscreen();
         }
     };
 
@@ -36,15 +44,30 @@ const videoHandler = () => {
     videoItem.addEventListener('pause', showPlayButton);
     videoItem.addEventListener('ended', showPlayButton);
 
+    const togglePlay = async () => {
+        if (!isLoaded) {
+            loadVideo();
+        }
+
+        try {
+            if (videoItem.paused) {
+                await videoItem.play();
+            } else {
+                videoItem.pause();
+            }
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
     videoWrapper.addEventListener('click', (e) => {
         if (e.target === videoItem) return;
-
-        videoItem.paused ? videoItem.play() : videoItem.pause();
+        togglePlay();
     });
 
     videoPlay.addEventListener('click', (e) => {
         e.stopPropagation();
-        videoItem.play();
+        togglePlay();
     });
 };
 
