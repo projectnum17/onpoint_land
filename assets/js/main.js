@@ -155,6 +155,109 @@ const animationsHandler = () => {
         });
     };
 
+    const animateCirclesSequence = () => {
+        const section = document.querySelector('.circles__box');
+        if (!section) return;
+
+        gsap.to('.circles__bg', {
+            rotation: 2,
+            skewX: 10,
+            skewY: 10,
+            duration: 8,
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut',
+        });
+
+        const items = section.querySelectorAll('.circles__item:not(.main-el)');
+        const mainItem = section.querySelector('.main-el');
+        const lines = section.querySelectorAll('.circles__line');
+        const title = section.querySelector('.circles__title');
+
+        if (!items.length || !mainItem || !title) return;
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: 'top-=100 top',
+                end: `+=${items.length * 300}`,
+                scrub: true,
+                pin: true,
+                anticipatePin: 0.5,
+                invalidateOnRefresh: true
+            },
+        });
+
+        items.forEach((item, index) => {
+            tl.to(
+                item,
+                {
+                    x: () =>
+                        mainItem.getBoundingClientRect().left -
+                        item.getBoundingClientRect().left,
+                    y: () =>
+                        mainItem.getBoundingClientRect().top -
+                        item.getBoundingClientRect().top,
+                    ease: 'power3.out',
+                    duration: 1,
+                },
+                '+=0.2'
+            );
+
+            tl.to(
+                item,
+                {
+                    opacity: 0,
+                    duration: 0.2,
+                    ease: 'power1.out',
+                },
+                '+=0.5'
+            );
+
+            tl.to(
+                mainItem,
+                {
+                    scale: 1 + (index + 1) * 0.6,
+                    ease: 'power2.out',
+                    duration: 1,
+                },
+                '<'
+            );
+
+            if (lines[index]) {
+                tl.to(
+                    lines[index],
+                    {
+                        scale: 0,
+                        opacity: 0,
+                        transformOrigin: 'center center',
+                        ease: 'power2.out',
+                        duration: 1,
+                    },
+                    '<'
+                );
+            }
+        });
+
+        if (title) {
+            const s = new SplitText(title, { type: 'words, chars' });
+            gsap.set(s.chars, {
+                opacity: 0,
+                y: 20,
+                willChange: 'transform, opacity',
+                force3D: true,
+            });
+
+            tl.to(s.chars, {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: 'power3.out',
+                stagger: 0.03,
+            });
+        }
+    };
+
     const lenis = new Lenis();
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add((time) => lenis.raf(time * 1000));
@@ -164,6 +267,7 @@ const animationsHandler = () => {
     animateMoveElements();
     animateBounceElements();
     animationScrollingElements();
+    animateCirclesSequence();
 
     window.addEventListener('load', () => {
         ScrollTrigger.refresh();
