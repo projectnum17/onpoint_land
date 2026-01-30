@@ -2,12 +2,15 @@
 @use '../base/mixins' as *;
 
 .circles {
-    margin-bottom: var(--section-mb);
+    margin-bottom: rem(300);
     position: relative;
     overflow: hidden;
+    @include media('mobile') {
+        margin-bottom: rem(200);
+    }
 
     &__bg {
-        opacity: .3;
+        opacity: 0.3;
         mix-blend-mode: darken;
         object-fit: cover;
         inset: 0;
