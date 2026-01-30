@@ -66,6 +66,7 @@
         &__text {
             font: 400 #{rem(14)} / 150% var(--ff-base);
             margin-bottom: rem(56);
+            color: #a1d2a0b2;
             @include media('tablet') {
                 margin-bottom: rem(24);
                 font-size: rem(12);

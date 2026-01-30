@@ -130,7 +130,7 @@ const animationsHandler = () => {
             duration: 0.8,
             ease: 'power3.out',
             stagger: 0.1,
-            start: 'top 95%',
+            start: 'top 100%',
             end: 'bottom 80%',
         };
 
@@ -263,11 +263,11 @@ const animationsHandler = () => {
     gsap.ticker.add((time) => lenis.raf(time * 1000));
     gsap.ticker.lagSmoothing(0);
 
+    animateCirclesSequence();
     animateTitlesElements();
     animateMoveElements();
     animateBounceElements();
     animationScrollingElements();
-    animateCirclesSequence();
 
     window.addEventListener('load', () => {
         ScrollTrigger.refresh();
